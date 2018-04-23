@@ -14,6 +14,91 @@
     transition: .15s ease-in-out;
   }
 
+  &--show {
+    display: none;
+    margin: 0 0 5px auto;
+    width: 40px;height: 40px;
+    fill: #78bc61;
+
+    &.active {
+      fill: #52a49f;
+    }
+  }
+
+  &--mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    background-color: rgba(#ffffff, .95);
+    padding: 40px 15px;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    z-index: 999;
+
+    .navbar--close {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      fill: #121920;
+      display: block;
+      width: 24px;height: 24px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      width: 220px;
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        width: 100%;
+        flex:none;
+        padding: 5px 0;
+        border-bottom: 1px solid #e5e4d7;
+        
+        
+        &:nth-child(1), &:nth-child(2) {
+          width: 50%;
+        }
+
+        &:nth-child(3) {
+          text-align: center;
+          a {
+            display: block;
+            line-height: 20px;
+            padding: 5px 0;
+          }
+        }
+
+        &:nth-child(4) {
+          border-bottom: none;
+          padding-top: 15px;
+        }
+      }
+
+      .icon--lnk {
+        display: flex;
+        align-items: center;
+
+        svg {
+          width: 24px;
+          height: 24px;
+          vertical-align: middle;
+          line-height: 1;
+          margin-right: 10px;
+        }
+      }
+
+      .btn.default {width: 100%;}
+
+    }
+  }
   &--left, &--right {
     flex: 1;
 
@@ -47,19 +132,16 @@
             vertical-align: middle;
             line-height: 1;
             margin-right: 10px;
-            //fill: currentColor;
           }
-
         }
       }
     }
-  
   }
 
   &--center {
     flex: none;
 
-    a {
+    a.brand {
       display: block;
       color: #121920;
 
@@ -74,10 +156,6 @@
         transition: .15s ease-in-out;
       }
     }
-  }
-
-  &--left {
-
   }
 
   &--right {
@@ -98,6 +176,10 @@
     height: 40px;
   }
 
+  @include smallDown {
+    &--left ul, &--right ul {display: none;}
+    &--show {display: block;}
+  }
 
 
 

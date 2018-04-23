@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="css/styles.min.css">
   </head>
   <body>
+    <div class="alert">
+      <div class="alert--body">
+        <svg class="alert__icon">
+          <use xlink:href="#info"></use>
+        </svg>
+        <div class="alert__text">This website uses cookies. The information in the cookies is used to provide the best experience for you on our website.</div>
+        <div class="alert__btn">I agree</div>
+      </div>
+    </div>
     <header class="se__default--header">
       <div class="navbar">
         <div class="container">
@@ -23,7 +32,7 @@
                 <li><a href="">Contact</a></li>
               </ul>
             </div>
-            <div class="navbar--center"><a>
+            <div class="navbar--center"><a class="brand">
                 <svg>
                   <use xlink:href="#logo"></use>
                 </svg></a></div>
@@ -33,6 +42,26 @@
                     <svg>
                       <use xlink:href="#user"></use>
                     </svg><span>Sign in</span></a></li>
+                <li><a class="btn default" href="">Order now</a></li>
+              </ul>
+              <svg class="navbar--show">
+                <use xlink:href="#menu"></use>
+              </svg>
+            </div>
+            <div class="navbar--mobile">
+              <svg class="navbar--close">
+                <use xlink:href="#close"></use>
+              </svg>
+              <ul>
+                <li><a class="icon--lnk" href="">
+                    <svg>
+                      <use xlink:href="#basket"></use>
+                    </svg><span>Cart</span></a></li>
+                <li><a class="icon--lnk" href="">
+                    <svg>
+                      <use xlink:href="#user"></use>
+                    </svg><span>Sign in</span></a></li>
+                <li><a href="">Contact</a></li>
                 <li><a class="btn default" href="">Order now</a></li>
               </ul>
             </div>
@@ -100,7 +129,7 @@
       <section class="se__what">
         <div class="container">
           <div class="row middle">
-            <div class="col sm-6 md-4">
+            <div class="col md-4">
               <div class="section__intro">
                 <h2>What is Simpleat?
                   <svg class="decor">
@@ -111,7 +140,7 @@
                 <p>Simpleat will take care of your hunger while you have more important things to do whether it is your work, business, travel or simply having fun.</p>
               </div>
             </div>
-            <div class="col sm-6 md-7 offset-md-1">
+            <div class="col md-7 offset-md-1">
               <button class="modal--video" data-mfp-src="http://www.youtube.com/watch?v=RtBbinpK5XI"><img src="img/what_video.png" alt=""><span class="overlay">
                   <svg class="video">
                     <use xlink:href="#play"></use>
@@ -709,15 +738,6 @@
         </div>
       </div>
     </footer>
-    <div class="alert">
-      <div class="alert--body">
-        <svg class="alert__icon">
-          <use xlink:href="#info"></use>
-        </svg>
-        <div class="alert__text">This website uses cookies. The information in the cookies is used to provide the best experience for you on our website.</div>
-        <div class="alert__btn">I agree</div>
-      </div>
-    </div>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/plugins.min.js"></script>
     <script src="js/app.js"></script>

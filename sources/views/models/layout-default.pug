@@ -9,6 +9,11 @@ html(lang="en")
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:400,700")
     link(rel="stylesheet", href="css/styles.min.css")
   body
+    .alert
+      .alert--body
+        svg.alert__icon: use(xlink:href="#info")
+        .alert__text This website uses cookies. The information in the cookies is used to provide the best experience for you on our website.
+        .alert__btn I agree
     header.se__default--header
       .navbar
         .container
@@ -19,12 +24,25 @@ html(lang="en")
                   svg: use(xlink:href="#basket")
                   span Cart
                 li: a(href="") Contact
-            .navbar--center: a: svg: use(xlink:href="#logo")
+            .navbar--center
+              a.brand: svg: use(xlink:href="#logo")
             .navbar--right
               ul
                 li: a.icon--lnk(href="")
                   svg: use(xlink:href="#user")
                   span Sign in
+                li: a.btn.default(href="") Order now
+              svg.navbar--show: use(xlink:href="#menu")
+            .navbar--mobile
+              svg.navbar--close: use(xlink:href="#close")
+              ul
+                li: a.icon--lnk(href="")
+                  svg: use(xlink:href="#basket")
+                  span Cart
+                li: a.icon--lnk(href="")
+                  svg: use(xlink:href="#user")
+                  span Sign in
+                li: a(href="") Contact
                 li: a.btn.default(href="") Order now
     main.se__default--main: block content
     footer.se__default--footer
@@ -71,11 +89,6 @@ html(lang="en")
                       img(src="img/en.png", alt="") 
                       span English
                     li: a(data-toggle="multilanguage") disable lalguage
-    .alert
-      .alert--body
-        svg.alert__icon: use(xlink:href="#info")
-        .alert__text This website uses cookies. The information in the cookies is used to provide the best experience for you on our website.
-        .alert__btn I agree
 
 
     script(src="js/jquery-3.3.1.min.js")

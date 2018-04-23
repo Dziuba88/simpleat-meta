@@ -55,5 +55,20 @@
       $(this).parents('.contacts').removeClass('multilanguage');
     })
 
+    $('.navbar--mobile').hide();
+    $('.navbar--show').click(function () {
+      $('.navbar--mobile').fadeIn(300, function () {
+        $(this).css('display', 'flex');
+        $('html').css('overflow', 'hidden');
+      });
+    });
+
+    $('.navbar--close').click(function () {
+      $('.navbar--mobile').fadeOut(300, function () {
+        $(this).css('display', 'none');
+        $('html').css('overflow', '');
+      });
+    });
+
 
   });
