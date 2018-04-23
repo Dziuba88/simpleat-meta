@@ -1,0 +1,436 @@
+extends models/layout-default
+block content
+  section.se__hero
+    .container
+      .row.middle
+        .col.md-6
+          img(src="img/bottles.png", alt="")
+        .col.md-6
+          .section__intro
+            h2 More than food
+              svg.decor: use(xlink:href="#decor")
+            p Everything your body needs in one bottle of Simpleat. Drink Simpleat and forget about hunger. Be the first to try nutrition designed for your needs.
+            p: strong Free shipping for orders over €90
+          form(action="")
+            select.big
+              option(value="4") 4 bottles
+              option(value="6") 6 bottles
+              option(value="8") 8 bottles
+              option(value="12" selected) 12 bottles
+              option(value="24") 24 bottles
+              option(value="48") 48 bottles
+            .row
+              .col.sm-6
+                .radio.big
+                  input#onetime(type="radio", name="se__hero", checked, value="onetime")
+                  label(for="onetime")
+                    span.input: svg: use(xlink:href="#check")
+                    span.text
+                      strong One-Time
+                      span Purchase
+              .col.sm-6
+                .radio.big
+                  input#subscribe(type="radio", name="se__hero", value="subscribe")
+                  label(for="subscribe")
+                    span.input: svg: use(xlink:href="#check")
+                    a(tabindex="-1" data-show="popover" data-placement="top" data-content="<p>By subscribing you will receive 12 bottles of Simpleat monthly</p><p>You can cancel your subscription anytime. <a>Learn more</a></p>").text
+                      strong Subscribe
+                      span and save 5%
+            .row.form--footer
+              .col.sm-6
+                .total 
+                  strong €32
+                  span €2.60 per meal (400 kcal)
+              .col.sm-6
+                button.btn.default Add to cart
+  section.se__what
+    .container
+      .row.middle
+        .col.sm-6.md-4
+          .section__intro
+            h2 What is Simpleat?
+              svg.decor: use(xlink:href="#decor")
+            p Simpleat is made to provide the perfectly balanced diet with every nutrient your body needs for optimal health.
+            p Simpleat will take care of your hunger while you have more important things to do whether it is your work, business, travel or simply having fun.
+        .col.sm-6.md-7.offset-md-1
+          button.modal--video(data-mfp-src="http://www.youtube.com/watch?v=RtBbinpK5XI")
+            img(src="img/what_video.png", alt="")
+            span.overlay
+              svg.video: use(xlink:href="#play")
+              span Play video
+  section.se__why
+    .container
+      .section__intro
+        h2 Why Simpleat?
+          svg.decor: use(xlink:href="#decor")
+        p Enjoy all the benefits of Simpleat
+      .row
+        .col.md-2.sm-6: .why--item
+          .img
+            img(src="img/why1.png", alt="")
+            svg(width="81.4" height="71.8"): use(xlink:href="#why1")
+          .text
+            h3 Complete nutrition
+            p One bottle of Simleat provides 20% of your daiyly needs for calories and micronutrients
+        .col.md-2.sm-6: .why--item
+          .img
+            img(src="img/why2.png", alt="")
+            svg(width="75.1" height="75.1"): use(xlink:href="#why2")
+          .text
+            h3 Save time
+            p Spend your time on business, sport, work, family or fun. Simpleat will take care of your nutrition.
+        .col.md-2.sm-6: .why--item
+          .img
+            img(src="img/why3.png", alt="")
+            svg(width="83.1" height="82.9"): use(xlink:href="#why3")
+          .text
+            h3 Save money
+            p Reasonable price for a complete, balanced and healthy meal. 
+        .col.md-2.sm-6: .why--item
+          .img
+            img(src="img/why4.png", alt="")
+            svg(width="82.7" height="76.4"): use(xlink:href="#why4")
+          .text
+            h3 Great health
+            p Simpleat helps your body to stay healthy and vibrant.
+        .col.md-2.sm-6: .why--item
+          .img
+            img(src="img/why5.png", alt="")
+            svg(width="89.4" height="89.4"): use(xlink:href="#why5")
+          .text
+            h3 High energy
+            p No sugar spikes, only sustainable level of energy.
+        .col.md-2.sm-6: .why--item
+          .img
+            img(src="img/why6.png", alt="")
+            svg(width="112.3" height="76.6"): use(xlink:href="#why6")
+          .text
+            h3 No hunger
+            p A bottle of Simpleat immediately saves you from hunger and satisfy your body needs. 
+      a(href="").btn.default Order Simpleat
+  section.se__testimonial
+    .container
+      .section__intro
+        h2 Testimonial
+          svg.decor: use(xlink:href="#decor")
+        p Simpleat is made to provide the perfectly balanced diet with every nutrient your body needs for optimal health.
+      .row
+        .col.md-3.sm-6: .testimonial--item.modal--video(data-mfp-src="http://www.youtube.com/watch?v=RtBbinpK5XI")
+          svg.video: use(xlink:href="#play")
+          img(src="img/testimonial1.png", alt="")
+          .descrtiption
+            strong Anna, 25 • Manager
+            span Lorem ipsum dolor sit elit,sed do eiusmod elit,sed do eiusmod ipsum 
+        .col.md-3.sm-6: .testimonial--item
+          img(src="img/testimonial2.png", alt="")
+          .descrtiption
+            strong Stiv, 25 • Manager 
+            span Lorem ipsum dolor sit elit,sed do eiusmod elit,sed do eiusmod ipsum 
+        .col.md-3.sm-6: .testimonial--item.modal--video(data-mfp-src="http://www.youtube.com/watch?v=RtBbinpK5XI")
+          svg.video: use(xlink:href="#play")
+          img(src="img/testimonial3.png", alt="")
+          .descrtiption
+            strong Julia, 45 • Manager 
+            span Lorem ipsum dolor sit elit,sed do eiusmod elit,sed do eiusmod ipsum 
+        .col.md-3.sm-6: .testimonial--item
+          img(src="img/testimonial4.png", alt="")
+          .descrtiption
+            strong John, 35 • Manager 
+            span Lorem ipsum dolor sit elit,sed do eiusmod elit,sed do eiusmod ipsum 
+  section.se__ingredients
+    .container
+      .section__intro
+        h2 Main ingredients
+          svg.decor: use(xlink:href="#decor")
+        p What is inside Simpleat?
+      .ingredients
+        .ingredients--item
+          .img: img(src="img/ingredients1.png", alt="")
+          .text
+            h3 Soybean protein
+            p Soy is a complete protein and rich in vitamins and minerals. Soybean protein provides all the essential amino acids in the amounts needed for human health.
+        .ingredients--item
+          .img: img(src="img/ingredients2.png", alt="")
+          .text
+            h3 Oils
+            p The perfect mix of lipids from sea algae, coconut, sunflower, flaxseed and canola. Rich with omega-3, unsaturated fatty acids DHA and EPA, which contribute to the normal function of the heart and brain function.
+        .ingredients--item
+          .img: img(src="img/ingredients3.png", alt="")
+          .text
+            h3 Oat flour
+            p Oat flour is made from whole oats and contains beta-glucans. This fiber have shown to lower risk factors for heart disease such as high cholesterol and high blood pressure.
+        .ingredients--item
+          .img: img(src="img/ingredients4.png", alt="")
+          .text
+            h3 Isomaltulose
+            p Isomaltulose is a natural occurring disaccharide. It keeps you energetic without the spikes of refined sugar.
+        .ingredients--item
+          .img: img(src="img/ingredients5.png", alt="")
+          .text
+            h3 Minerals & Vitamins
+            p A bottle of Simpleat contains 20% of daily requirements of all micronutrients for your body.
+  section.se__facts
+    .container
+      .section__intro
+        h2 Nutritional Facts
+          svg.decor: use(xlink:href="#decor")
+      .row.middle
+        .col.md-4
+          .facts--item
+            svg.icon: use(xlink:href="#fact1")
+            .text
+              strong Energy
+              span 400 kcal in one bottle
+              span 20% of your daily needs
+          .facts--item
+            svg.icon: use(xlink:href="#fact2")
+            .text
+              strong Nutrients
+              span 25 micronutrients
+              span 20% of your daily requirements
+              span in each bottle
+          .facts--item
+            svg.icon: use(xlink:href="#fact3")
+            .text
+              strong Neutral pleasant taste
+              span Enjoy Simpleat's neutral taste
+              span several times a day and never get tired
+        .col.md-4: img(src="img/facts.png", alt="").facts--img
+        .col.md-4
+          .facts--item
+            svg.icon: use(xlink:href="#fact4")
+            .text
+              strong Vegan, lactose-free, nut-free
+              span Easy to make food descisions.
+          .facts--item
+            svg.icon: use(xlink:href="#fact5")
+            .text
+              strong Scientifically approved
+              span Simpleat is designed in a lab, based on clinical studies and produced using the latest high-tech.
+          .facts--item
+            svg.icon: use(xlink:href="#fact6")
+            .text
+              strong Anywhere you go
+              span 1-year shelf life and no refrigeration required. Excellent nutrition is always with you 
+      .facts--footer
+        p: a(href="").pdf Download PDF
+        p: a(href="").btn.default Order now
+  section.se__chart
+    .container
+      .row
+        .col.md-8.offset-md-2.sm-10.offset-sm-1
+          .section__intro
+            h2 Low glycemic and insulin index
+              svg.decor: use(xlink:href="#decor")
+            p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          img(src="img/chart.png", alt="")
+  section.se__table
+    .container
+      .section__intro
+        h2 Simpleat — Super food
+          svg.decor: use(xlink:href="#decor")
+        p Nutritional Profile.<br>Click on the Title to learm more
+      ul.nav--tabs
+        li.active: a(data-toggle="tab" href="#macronutreins") Macronutreins
+        li: a(data-toggle="tab" href="#vitamins") Vitamins
+        li: a(data-toggle="tab" href="#minerals") Minerals
+      .tab--content
+        #macronutreins.tab--pane.active
+          .row.middle
+            .col.md-5.preview
+              img(src="img/preview.png", alt="")
+              span.overlay What's inside?
+            .col.md-7
+              table.preview--table
+                thead
+                  tr
+                    td 
+                    td Amount
+                    td %RI 
+                tbody
+                  tr
+                    th Calories
+                    td 400 kcal
+                    td 20%
+                  tr
+                    th Fat 
+                    td 27.7 g
+                    td 
+                  tr
+                    th Saturated
+                    td 10.5 g
+                    td 
+                  tr
+                    th Monosaturated
+                    td 5.3 g
+                    td 
+                  tr
+                    th Polyunsaturated
+                    td 10.4 g
+                    td 
+                  tr
+                    th Omega 3 fatty acids
+                    td 1.3 g
+                    td 
+                  tr
+                    th Omega 6 fatty acids
+                    td 7.6 g
+                    td 
+                  tr
+                    th Carbohydrates
+                    td 80.8 g
+                    td 
+                  tr
+                    th Sugars
+                    td 20.7 g
+                    td 
+                  tr
+                    th Fiber
+                    td 7.0 g
+                    td 
+                  tr
+                    th Protein
+                    td 40.1 g
+                    td 
+                  tr
+                    th Salt
+                    td 2.1 g
+                    td 
+        #vitamins.tab--pane
+          .row.middle
+            .col.md-5.preview
+              img(src="img/preview.png", alt="")
+              span.overlay What's inside?
+            .col.md-7
+              table.preview--table
+                thead
+                  tr
+                    td 
+                    td Amount
+                    td %RI 
+                tbody
+                  tr
+                    th Calories
+                    td 400 kcal
+                    td 20%
+                  tr
+                    th Fat 
+                    td 27.7 g
+                    td 
+                  tr
+                    th Saturated
+                    td 10.5 g
+                    td 
+                  tr
+                    th Monosaturated
+                    td 5.3 g
+                    td 
+                  tr
+                    th Polyunsaturated
+                    td 10.4 g
+                    td 
+                  tr
+                    th Omega 3 fatty acids
+                    td 1.3 g
+                    td 
+                  tr
+                    th Omega 6 fatty acids
+                    td 7.6 g
+                    td 
+                  tr
+                    th Carbohydrates
+                    td 80.8 g
+                    td 
+                  tr
+                    th Sugars
+                    td 20.7 g
+                    td 
+                  tr
+                    th Fiber
+                    td 7.0 g
+                    td 
+                  tr
+                    th Protein
+                    td 40.1 g
+                    td 
+                  tr
+                    th Salt
+                    td 2.1 g
+                    td 
+        #minerals.tab--pane
+          .row.middle
+            .col.md-5.preview
+              img(src="img/preview.png", alt="")
+              span.overlay What's inside?
+            .col.md-7
+              table.preview--table
+                thead
+                  tr
+                    td 
+                    td Amount
+                    td %RI 
+                tbody
+                  tr
+                    th Calories
+                    td 400 kcal
+                    td 20%
+                  tr
+                    th Fat 
+                    td 27.7 g
+                    td 
+                  tr
+                    th Saturated
+                    td 10.5 g
+                    td 
+                  tr
+                    th Monosaturated
+                    td 5.3 g
+                    td 
+                  tr
+                    th Polyunsaturated
+                    td 10.4 g
+                    td 
+                  tr
+                    th Omega 3 fatty acids
+                    td 1.3 g
+                    td 
+                  tr
+                    th Omega 6 fatty acids
+                    td 7.6 g
+                    td 
+                  tr
+                    th Carbohydrates
+                    td 80.8 g
+                    td 
+                  tr
+                    th Sugars
+                    td 20.7 g
+                    td 
+                  tr
+                    th Fiber
+                    td 7.0 g
+                    td 
+                  tr
+                    th Protein
+                    td 40.1 g
+                    td 
+                  tr
+                    th Salt
+                    td 2.1 g
+                    td 
+      .se__table--footer: a(href="").btn.default Order now
+  section.se__join
+    .container
+      .section__intro
+        h2 Join us
+          svg.decor: use(xlink:href="#decor")
+        p Stay updated, enjoy special offers and bonuses
+      .row
+        .col.md-8.offset-md-2
+          form(action="")
+            .row
+              .col.sm-8
+                input(type="email" placeholder="Your e-mail" name="join_email")
+                span.error Please enter valid e-Mail!
+              .col.sm-4: button.btn.default Sign up!
+

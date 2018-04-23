@@ -1,0 +1,83 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title SIMPLEAT - Page Title
+    link(rel="shortcut icon", href="img/favicon.ico", type="image/x-icon")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:400,700")
+    link(rel="stylesheet", href="css/styles.min.css")
+  body
+    header.se__default--header
+      .navbar
+        .container
+          .navbar--wraper
+            .navbar--left
+              ul
+                li: a.icon--lnk(href="")
+                  svg: use(xlink:href="#basket")
+                  span Cart
+                li: a(href="") Contact
+            .navbar--center: a: svg: use(xlink:href="#logo")
+            .navbar--right
+              ul
+                li: a.icon--lnk(href="")
+                  svg: use(xlink:href="#user")
+                  span Sign in
+                li: a.btn.default(href="") Order now
+    main.se__default--main: block content
+    footer.se__default--footer
+      .container
+        ul.social
+          li: a(href="https://www.facebook.com/" target="_blank"): svg: use(xlink:href="#facebook")
+          li: a(href="https://www.twitter.com/" target="_blank"): svg: use(xlink:href="#twitter")
+          li: a(href="https://www.instagram.com/" target="_blank"): svg: use(xlink:href="#instagram")
+        ul.pages
+          li: a(href="") Blog
+          li: a(href="") FAQ
+          li: a(href="") Legal
+        .copyrights © 2018, Simpleat
+      .contacts.multilanguage
+        .container
+          .contacts--wraper
+            .contacts__items
+              a(href="")
+                svg: use(xlink:href="#phone")
+                span
+                  strong +123 456-789-000
+                  span Every day from 8 AM - 8 PM
+              a(href="")
+                svg: use(xlink:href="#mail")
+                span
+                  strong info@simleat.me
+                  span We will respond ASAP
+
+
+            .language
+
+              .dropdown
+                button(data-toggle="dropdown")
+                  span.text
+                    img(src="img/en.png", alt="") 
+                    span English
+                  svg.caret: use(xlink:href="#caret")
+                .dropdown--menu
+                  ul
+                    li.active: a 
+                      img(src="img/en.png", alt="") 
+                      span English
+                    li: a 
+                      img(src="img/en.png", alt="") 
+                      span English
+                    li: a(data-toggle="multilanguage") disable lalguage
+    .alert
+      .alert--body
+        svg.alert__icon: use(xlink:href="#info")
+        .alert__text This website uses cookies. The information in the cookies is used to provide the best experience for you on our website.
+        .alert__btn I agree
+
+
+    script(src="js/jquery-3.3.1.min.js")
+    script(src="js/plugins.min.js")
+    script(src="js/app.js")

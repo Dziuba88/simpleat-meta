@@ -1,0 +1,89 @@
+.radio {
+  position: relative;
+  margin-bottom: 20px;
+
+  input {
+    display: none;
+
+    + label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      
+
+      .input {
+        display: block;
+        border-radius: 6px;
+        border: 2px solid #e5e4d7;
+        flex: none;
+        width: 40px;
+        height: 40px;
+        background-color: #ffffff;
+        padding: 10px;
+        transition: .15s ease-in-out;
+        position: relative;
+
+        svg {
+          width: 18px;
+          height: 18px;
+          fill: #ffffff;
+          display: block;
+          position: absolute;
+          top: 50%;left: 50%;
+          margin-top: -9px;
+          margin-left: -9px;
+          transition: .15s ease-in-out;
+          transform: scale(0)
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          transition: .15s ease-in-out;
+          display: block;
+          width: 16px;
+          height: 16px;
+          border-radius: 2px;
+          background-color: #e5e4d7;
+        }
+      }
+      .text {
+        flex: 1;
+        font-size: 16px;
+        line-height: 18px;
+        padding-left: 20px;
+
+        strong {
+          display: block;
+          color: #121920;
+          transition: .15s ease-in-out;
+        }
+
+        span {
+          display: block;
+          color: #878a8d;
+        }
+      }
+    }
+
+    &:checked + label {
+      .input {
+        background-color: #36c1ba;
+        border-color: #36c1ba;
+
+        svg {
+          transform: scale(1)
+        }
+
+        &:before {
+          transform: scale(0)
+        }
+      }
+
+      .text strong {
+        color: #36c1ba;
+      }
+    }
+  }
+}
