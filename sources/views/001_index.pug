@@ -121,7 +121,7 @@ block content
           .descrtiption
             strong Anna, 25 • Manager
             span Lorem ipsum dolor sit elit,sed do eiusmod elit,sed do eiusmod ipsum 
-        .col.md-3.sm-6: .testimonial--item
+        .col.md-3.sm-6: .testimonial--item.modal--inline(data-mfp-src="#stiv")
           img(src="img/testimonial2.png", alt="")
           .descrtiption
             strong Stiv, 25 • Manager 
@@ -132,11 +132,21 @@ block content
           .descrtiption
             strong Julia, 45 • Manager 
             span Lorem ipsum dolor sit elit,sed do eiusmod elit,sed do eiusmod ipsum 
-        .col.md-3.sm-6: .testimonial--item
+        .col.md-3.sm-6: .testimonial--item.modal--inline(data-mfp-src="#john")
           img(src="img/testimonial4.png", alt="")
           .descrtiption
             strong John, 35 • Manager 
             span Lorem ipsum dolor sit elit,sed do eiusmod elit,sed do eiusmod ipsum 
+    #stiv.testimonial--popup.mfp-hide
+      .testimonial--popup__image: img(src="img/testimonial2.png", alt="")
+      .testimonial--popup__text 
+        h3 Stiv, 25 • <span>Manager</span> 
+        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos quidem eius reiciendis, hic accusamus suscipit temporibus praesentium quae ipsum. Quidem ipsam cumque, dolorem enim vel qui laborum voluptatem eveniet perferendis!
+    #john.testimonial--popup.mfp-hide
+      .testimonial--popup__image: img(src="img/testimonial4.png", alt="")
+      .testimonial--popup__text 
+        h3 John, 35 • <span>Manager</span> 
+        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos quidem eius reiciendis, hic accusamus suscipit temporibus praesentium quae ipsum. Quidem ipsam cumque, dolorem enim vel qui laborum voluptatem eveniet perferendis!
   section.se__ingredients
     .container
       .section__intro

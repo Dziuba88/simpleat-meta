@@ -1,0 +1,48 @@
+extends models/layout-default
+block content
+  section.se__blog
+    .container
+      .row
+        .col.md-8
+          .se__blog--post
+            .se__blog--back: a(href="")
+              svg: use(xlink:href="#prev")
+              span Go back
+            .post--header
+              h1 Awersome image post
+              .info
+                span.info__date
+                  svg: use(xlink:href="#calendar")
+                  span Dec. 10, 2017
+                span.info__tags
+                  svg: use(xlink:href="#tag")
+                  span Tags: 
+                    a(href="") dog
+                    | , 
+                    a(href="") cat
+                    | , 
+                    a(href="") fish
+            .post--media.modal--video(data-mfp-src="http://www.youtube.com/watch?v=RtBbinpK5XI")
+              span.overlay
+                svg.video: use(xlink:href="#play")
+                span Play video
+              img(src="img/blog-post.png", alt="")
+            .post--content
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to <a>make a type</a> specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+              ul
+                li The standard chunk of Lorem Ipsum used since
+                li the 1500s is reproduced below for those interested.
+                li Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
+                li reproduced in their exact original form, accompanied by English
+                li versions from the 1914 translation by H. Rackham.
+
+        .col.md-4
+          .se__blog--recent
+            .module--title Recent posts
+            ul
+              li: a(href="") Awersome Post Lorem
+              li: a(href="") Awersome Post New
+              li: a(href="") Awersome Post Ips
+              li: a(href="") Awersome Post Dualorem
+              li: a(href="") Awersome Post

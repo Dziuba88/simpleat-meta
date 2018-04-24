@@ -38,6 +38,11 @@
       showCloseBtn: true,
     });
 
+    $('.modal--inline').magnificPopup({
+      type: 'inline',
+      showCloseBtn: true,
+    });
+
     $('.se__join form button').click(function (e) {
       var email = $('input[name=join_email]').val();
       if(!email.match(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/)) {

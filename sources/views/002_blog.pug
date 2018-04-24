@@ -1,0 +1,82 @@
+extends models/layout-default
+block content
+  section.se__blog
+    .container
+      .row
+        .col.md-8
+          h1 All news
+          .se__blog--list
+            .se__blog--item
+              a(href="").thumbnail: img(src="img/blog.png", alt="")
+              .info
+                .info--header
+                  span.info--header__date
+                    svg: use(xlink:href="#calendar")
+                    span Dec. 10, 2017
+                  span.info--header__tags
+                    svg: use(xlink:href="#tag")
+                    span Tags: 
+                      a(href="") dog
+                      | , 
+                      a(href="") cat
+                      | , 
+                      a(href="") fish
+                .info--text
+                  h3: a(href="") Awersome image post
+                  p One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin Samsa woke from troubled dreams, he found...
+            .se__blog--item
+              a(href="").thumbnail
+                svg.video: use(xlink:href="#play")
+                img(src="img/blog.png", alt="")
+              .info
+                .info--header
+                  span.info--header__date
+                    svg: use(xlink:href="#calendar")
+                    span Dec. 10, 2017
+                  span.info--header__tags
+                    svg: use(xlink:href="#tag")
+                    span Tags: 
+                      a(href="") dog
+                      | , 
+                      a(href="") cat
+                      | , 
+                      a(href="") fish
+                .info--text
+                  h3: a(href="") Awersome image post
+                  p One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin Samsa woke from troubled dreams, he found...
+            .se__blog--item
+              .info
+                .info--header
+                  span.info--header__date
+                    svg: use(xlink:href="#calendar")
+                    span Dec. 10, 2017
+                  span.info--header__tags
+                    svg: use(xlink:href="#tag")
+                    span Tags: 
+                      a(href="") dog
+                      | , 
+                      a(href="") cat
+                      | , 
+                      a(href="") fish
+                .info--text
+                  h3: a(href="") Awersome image post
+                  p One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin Samsa woke from troubled dreams, he found...
+          .se__pagination
+            ul
+              li.inactive: span: svg: use(xlink:href="#prev")
+              li.active: span 1
+              li: a(href="") 2
+              li: a(href="") 3
+              li: a(href="") 4
+              li: a(href="") 5
+              li: a(href=""): svg: use(xlink:href="#next")
+
+        .col.md-4
+          .se__blog--recent
+            .module--title Recent posts
+            ul
+              li: a(href="") Awersome Post Lorem
+              li: a(href="") Awersome Post New
+              li: a(href="") Awersome Post Ips
+              li: a(href="") Awersome Post Dualorem
+              li: a(href="") Awersome Post
