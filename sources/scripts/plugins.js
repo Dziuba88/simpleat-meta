@@ -4,3 +4,4 @@
 //@prepros-append plugins/popup.js
 //@prepros-append plugins/tabs.js
 //@prepros-append plugins/dropdown.js
+//@prepros-append plugins/collapse.js

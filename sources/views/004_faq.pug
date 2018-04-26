@@ -1,0 +1,54 @@
+extends models/layout-default
+block content
+  section.se__faq
+    .container
+      .row
+        .col.md-6
+          .section__intro
+            h2 General questions
+              svg.decor: use(xlink:href="#decor")
+          #general.panel--group
+            - for (i=0;i<5;i++)
+              .panel
+                .panel--heading.collapsed(data-toggle="collapse" data-parent="#general" data-target="#general_"+i)
+                  svg.panel--heading__caret: use(xlink:href="#caret")
+                  .panel--heading__title Lorem Ipsum is simply dummy text of the printing and typesetting industry? 
+                .panel--collapse.collapse(id="general_"+i)
+                  .panel--body Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        .col.md-6
+          .section__intro
+            h2 Nutritional questions
+              svg.decor: use(xlink:href="#decor")
+          #nutritional.panel--group
+            - for (i=0;i<3;i++)
+              .panel
+                .panel--heading.collapsed(data-toggle="collapse" data-parent="#nutritional" data-target="#nutritional_"+i)
+                  svg.panel--heading__caret: use(xlink:href="#caret")
+                  .panel--heading__title Lorem Ipsum is simply dummy text of the printing and typesetting industry? 
+                .panel--collapse.collapse(id="nutritional_"+i)
+                  .panel--body Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      .row
+        .col.md-6
+          .section__intro
+            h2 Common questions
+              svg.decor: use(xlink:href="#decor")
+          #common.panel--group
+            - for (i=0;i<5;i++)
+              .panel
+                .panel--heading.collapsed(data-toggle="collapse" data-parent="#common" data-target="#common_"+i)
+                  svg.panel--heading__caret: use(xlink:href="#caret")
+                  .panel--heading__title Lorem Ipsum is simply dummy text of the printing and typesetting industry? 
+                .panel--collapse.collapse(id="common_"+i)
+                  .panel--body Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        .col.md-6
+          .section__intro
+            h2 Order & shipping
+              svg.decor: use(xlink:href="#decor")
+          #order.panel--group
+            - for (i=0;i<3;i++)
+              .panel
+                .panel--heading.collapsed(data-toggle="collapse" data-parent="#order" data-target="#order_"+i)
+                  svg.panel--heading__caret: use(xlink:href="#caret")
+                  .panel--heading__title Lorem Ipsum is simply dummy text of the printing and typesetting industry? 
+                .panel--collapse.collapse(id="order_"+i)
+                  .panel--body Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.

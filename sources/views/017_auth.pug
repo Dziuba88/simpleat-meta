@@ -1,0 +1,43 @@
+extends models/layout-default
+block content
+  section.se__auth
+    .container
+      .row
+        .col.md-6
+          .section__intro
+            h2 Sign in
+              svg.decor: use(xlink:href="#decor")
+            p Sign in to your account
+          .se__auth--form#signin
+            input(type="email" placeholder="Your e-mail", name="signin__email")
+            label.error Please enter valid e-Mail
+            input(type="password" placeholder="Password", name="signin__password")
+            label.error Password must be 6 characters min
+            .checkbox
+              input(type="checkbox")#remember
+              label(for="remember")
+                span.input: svg: use(xlink:href="#check")
+                strong Remember me
+            button.btn.default Sign in
+            p: a Lost your password?
+        .col.md-6
+          .section__intro
+            h2 Register
+              svg.decor: use(xlink:href="#decor")
+            p Create a new account
+          .se__auth--form#signup
+            input(type="email" placeholder="Your e-mail", name="signup__email")
+            label.error Please enter valid e-Mail
+            input(type="password" placeholder="Password", name="signup__password")
+            label.error Password must be 6 characters min
+            input(type="password" placeholder="Confirm password", name="signup__confirm")
+            label.error The password fields didn't match.
+            button.btn.default Register
+      .se__auth--social
+        p For easier checkout, sing in or register using your social account
+        a.btn.facebook(href="")
+          svg.decor: use(xlink:href="#icon-facebook")
+          span Facebook
+        a.btn.google
+          svg.decor: use(xlink:href="#icon-google")
+          span Google

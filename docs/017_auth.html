@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SIMPLEAT - Page Title</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="css/styles.min.css">
+  </head>
+  <body>
+    <div class="alert">
+      <div class="alert--body">
+        <svg class="alert__icon">
+          <use xlink:href="#info"></use>
+        </svg>
+        <div class="alert__text">This website uses cookies. The information in the cookies is used to provide the best experience for you on our website.</div>
+        <div class="alert__btn">I agree</div>
+      </div>
+    </div>
+    <header class="se__default--header">
+      <div class="navbar">
+        <div class="container">
+          <div class="navbar--wraper">
+            <div class="navbar--left">
+              <ul>
+                <li><a class="icon--lnk" href="">
+                    <svg>
+                      <use xlink:href="#basket"></use>
+                    </svg><span>Cart</span></a></li>
+                <li><a href="">Contact</a></li>
+              </ul>
+            </div>
+            <div class="navbar--center"><a class="brand">
+                <svg>
+                  <use xlink:href="#logo"></use>
+                </svg></a></div>
+            <div class="navbar--right">
+              <ul>
+                <li><a class="icon--lnk" href="">
+                    <svg>
+                      <use xlink:href="#user"></use>
+                    </svg><span>Sign in</span></a></li>
+                <li><a class="btn default" href="">Order now</a></li>
+              </ul>
+              <svg class="navbar--show">
+                <use xlink:href="#menu"></use>
+              </svg>
+            </div>
+            <div class="navbar--mobile">
+              <svg class="navbar--close">
+                <use xlink:href="#close"></use>
+              </svg>
+              <ul>
+                <li><a class="icon--lnk" href="">
+                    <svg>
+                      <use xlink:href="#basket"></use>
+                    </svg><span>Cart</span></a></li>
+                <li><a class="icon--lnk" href="">
+                    <svg>
+                      <use xlink:href="#user"></use>
+                    </svg><span>Sign in</span></a></li>
+                <li><a href="">Contact</a></li>
+                <li><a class="btn default" href="">Order now</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="se__default--main">
+      <section class="se__auth">
+        <div class="container">
+          <div class="row">
+            <div class="col md-6">
+              <div class="section__intro">
+                <h2>Sign in
+                  <svg class="decor">
+                    <use xlink:href="#decor"></use>
+                  </svg>
+                </h2>
+                <p>Sign in to your account</p>
+              </div>
+              <div class="se__auth--form" id="signin">
+                <input type="email" placeholder="Your e-mail" name="signin__email">
+                <label class="error">Please enter valid e-Mail</label>
+                <input type="password" placeholder="Password" name="signin__password">
+                <label class="error">Password must be 6 characters min</label>
+                <div class="checkbox">
+                  <input type="checkbox" id="remember">
+                  <label for="remember"><span class="input">
+                      <svg>
+                        <use xlink:href="#check"></use>
+                      </svg></span><strong>Remember me</strong></label>
+                </div>
+                <button class="btn default">Sign in</button>
+                <p><a>Lost your password?</a></p>
+              </div>
+            </div>
+            <div class="col md-6">
+              <div class="section__intro">
+                <h2>Register
+                  <svg class="decor">
+                    <use xlink:href="#decor"></use>
+                  </svg>
+                </h2>
+                <p>Create a new account</p>
+              </div>
+              <div class="se__auth--form" id="signup">
+                <input type="email" placeholder="Your e-mail" name="signup__email">
+                <label class="error">Please enter valid e-Mail</label>
+                <input type="password" placeholder="Password" name="signup__password">
+                <label class="error">Password must be 6 characters min</label>
+                <input type="password" placeholder="Confirm password" name="signup__confirm">
+                <label class="error">The password fields didn't match.</label>
+                <button class="btn default">Register</button>
+              </div>
+            </div>
+          </div>
+          <div class="se__auth--social">
+            <p>For easier checkout, sing in or register using your social account</p><a class="btn facebook" href="">
+              <svg class="decor">
+                <use xlink:href="#icon-facebook"></use>
+              </svg><span>Facebook</span></a><a class="btn google">
+              <svg class="decor">
+                <use xlink:href="#icon-google"></use>
+              </svg><span>Google</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="se__default--footer">
+      <div class="container">
+        <ul class="social">
+          <li><a href="https://www.facebook.com/" target="_blank">
+              <svg>
+                <use xlink:href="#facebook"></use>
+              </svg></a></li>
+          <li><a href="https://www.twitter.com/" target="_blank">
+              <svg>
+                <use xlink:href="#twitter"></use>
+              </svg></a></li>
+          <li><a href="https://www.instagram.com/" target="_blank">
+              <svg>
+                <use xlink:href="#instagram"></use>
+              </svg></a></li>
+        </ul>
+        <ul class="pages">
+          <li><a href="">Blog</a></li>
+          <li><a href="">FAQ</a></li>
+          <li><a href="">Legal</a></li>
+        </ul>
+        <div class="copyrights">© 2018, Simpleat</div>
+      </div>
+      <div class="contacts multilanguage">
+        <div class="container">
+          <div class="contacts--wraper">
+            <div class="contacts__items"><a href="">
+                <svg>
+                  <use xlink:href="#phone"></use>
+                </svg><span><strong>+123 456-789-000</strong><span>Every day from 8 AM - 8 PM</span></span></a><a href="">
+                <svg>
+                  <use xlink:href="#mail"></use>
+                </svg><span><strong>info@simleat.me</strong><span>We will respond ASAP</span></span></a></div>
+            <div class="language">
+              <div class="dropdown">
+                <button data-toggle="dropdown"><span class="text"><img src="img/en.png" alt=""><span>English</span></span>
+                  <svg class="caret">
+                    <use xlink:href="#caret"></use>
+                  </svg>
+                </button>
+                <div class="dropdown--menu">
+                  <ul>
+                    <li class="active"><a> <img src="img/en.png" alt=""><span>English</span></a></li>
+                    <li><a> <img src="img/en.png" alt=""><span>English</span></a></li>
+                    <li><a data-toggle="multilanguage">disable lalguage</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/plugins.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

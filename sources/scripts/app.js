@@ -95,6 +95,36 @@
 
     $('.se__contact--form input, .se__contact--form textarea').focus(function () {
       $(this).removeClass('error')
-    })
+    });
+
+    $('#signin button').click(function () {
+      var email = $('input[name=signin__email]').val();
+      var password = $('input[name=signin__password]').val();
+      if(!email.match(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/)) {
+        $('input[name=signin__email]').addClass('error');
+      }
+      if (password.length < 6) {
+        $('input[name=signin__password]').addClass('error');
+      }
+    });
+
+    $('#signin input').focus(function () {
+      $(this).removeClass('error')
+    });
+
+    $('#signup button').click(function () {
+      var email = $('input[name=signup__email]').val();
+      var password = $('input[name=signup__password]').val();
+      var confirm = $('input[name=signup__confirm]').val();
+      if(!email.match(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/)) {
+        $('input[name=signup__email]').addClass('error');
+      }
+      if (password.length < 6) {
+        $('input[name=signup__password]').addClass('error');
+      }
+      if (password != confirm || confirm == '') {
+        $('input[name=signup__confirm]').addClass('error');
+      }
+    });
 
   });
