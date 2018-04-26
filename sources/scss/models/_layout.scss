@@ -1028,7 +1028,7 @@ a {
 .se__join {
   padding: 100px 0 70px;
 
-  form {
+  &--form {
     .col {
       position: relative;
     }
@@ -1421,5 +1421,117 @@ a {
         }
       }
     }
+  }
+}
+
+.se__contact {
+  padding: 60px 0;
+
+  .section__intro {
+    margin-bottom: 40px;
+    h2 {font-size: 40px;}
+  }
+
+  &--form {
+    background-color: #f1f6f4;
+    padding: 40px;
+    border-radius: 10px;
+
+    .btn.default {
+      font-size: 24px;
+      line-height: 30px;
+      padding: 15px 40px;
+    }
+
+    input, textarea {
+      display: block;
+      width: 100%;
+      resize: none;
+      background-color: #ffffff;
+      border: 2px solid #e4e3d6;
+      font-size: 18px;
+      line-height: 20px;
+      padding: 20px;
+      border-radius: 6px;
+      transition: .15s ease-in-out;
+
+      + label {
+        display: block;
+        color: #f9727f;
+        line-height: 20px;
+        font-size: 14px;
+        overflow: hidden;
+        height: 0;opacity: 0;
+        transition: .15s ease-in-out;
+      }
+
+      &::-webkit-input-placeholder {color: #121920;opacity: 1;}
+      &::-moz-placeholder {color: #121920;opacity: 1;}
+      &:-ms-input-placeholder {color: #121920;opacity: 1;}
+      &:-moz-placeholder {color: #121920;opacity: 1;}
+
+      &:focus {
+        &::-webkit-input-placeholder {color: transparent;}
+        &::-moz-placeholder {color: transparent;}
+        &:-ms-input-placeholder {color: transparent;}
+        &:-moz-placeholder {color: transparent;}
+      }
+
+      &.error {
+        background-color: #f9727f;
+        color: #ffffff;
+        &::-webkit-input-placeholder {color: #ffffff;opacity: 1;}
+        &::-moz-placeholder {color: #ffffff;opacity: 1;}
+        &:-ms-input-placeholder {color: #ffffff;opacity: 1;}
+        &:-moz-placeholder {color: #ffffff;opacity: 1;}
+  
+        + label {
+          height: auto;opacity: 1;
+        }
+      }
+    }
+
+    input {
+      margin-bottom: 10px;
+      + label {
+        margin-top: -10px;
+        margin-bottom: 10px;
+      }
+    }
+
+    textarea {
+      margin-bottom: 20px;
+      + label {
+        margin-top: -20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &--info {
+    padding: 30px 40px 0;
+
+    h3 {
+      font-size: 24px;
+      line-height: 20px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  @include smallDown {
+    &--form, &--info {
+      padding: 15px;
+      margin: 0;
+
+      input, textarea {font-size: 14px;}
+    }
+
+    &--form .btn.default {width: 100%;font-size: 14px;padding: 15px;}
   }
 }

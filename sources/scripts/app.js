@@ -43,7 +43,7 @@
       showCloseBtn: true,
     });
 
-    $('.se__join form button').click(function (e) {
+    $('.se__join button').click(function (e) {
       var email = $('input[name=join_email]').val();
       if(!email.match(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/)) {
         $('input[name=join_email]').addClass('error');
@@ -75,5 +75,26 @@
       });
     });
 
+    $('.se__contact--form button').click(function (e) {
+      var name = $('input[name=contact__name]').val();
+      var email = $('input[name=contact__email]').val();
+      var message = $('textarea[name=contact__message]').val();
+
+      if (name.length < 3) {
+        $('input[name=contact__name]').addClass('error');
+      };
+      if(!email.match(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/)) {
+        $('input[name=contact__email]').addClass('error');
+        //return false;
+      } 
+      if (message.length < 1) {
+        $('textarea[name=contact__message]').addClass('error');
+        //return false;
+      }
+    });
+
+    $('.se__contact--form input, .se__contact--form textarea').focus(function () {
+      $(this).removeClass('error')
+    })
 
   });
