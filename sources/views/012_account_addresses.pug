@@ -1,0 +1,91 @@
+extends models/layout-default
+block content
+  section.se__account
+    .container
+      .row
+        .col.sm-4
+          .se__account--nav
+            .nav__header
+              img(src="img/user.png", alt="")
+              p
+                span Welcome,
+                span user@example.com
+            .nav__body: ul
+                li.active: a(href="") Account details
+                li: a(href="") Addresses
+                li: a(href="") Orders
+                li: a(href="") Subscription
+                li: a(href="") Sign out
+        .col.sm-8
+          .section__intro
+            h2 My addresses
+              svg.decor: use(xlink:href="#decor")
+          .row
+            .col.md-6
+              .se__account--adress
+                a.modal--edit(data-mfp-src="#adress__edit"): svg: use(xlink:href="#edit")
+                h3 Address 1
+                h4 Konstantin Konstantinopolski
+                p user@example.com
+                p +276 123 23 32 43
+                p 155 Kinicker road, 1 exterior
+                p Spain
+                p Catalonia
+                p Barcelona
+                p 012343 
+            .col.md-6
+              .se__account--adress
+                a.modal--edit(data-mfp-src="#adress__edit"): svg: use(xlink:href="#edit")
+                h3 Address 1
+                h4 Konstantin Konstantinopolski
+                p user@example.com
+                p +276 123 23 32 43
+                p 155 Kinicker road, 1 exterior
+                p Spain
+                p Catalonia
+                p Barcelona
+                p 012343 
+          button.btn.default.addnew Add new address
+          #adress__edit.adress--popup.mfp-hide: .se__card--checkout
+            .checkout__row
+              .checkout__row--input
+                label Address title
+                input(type="text", required)
+            .checkout__row
+              .checkout__row--input
+                label First name
+                input(type="text", required)
+              .checkout__row--input
+                label Last name
+                input(type="text", required)
+            .checkout__row
+              .checkout__row--input
+                label E-mail
+                input(type="email", required)
+              .checkout__row--input
+                label Phone
+                input(type="tel", required)
+            .checkout__row
+              .checkout__row--input
+                label Street address
+                input(type="text", required)
+            .checkout__row
+              .checkout__row--input
+                select
+                  option(value="0" selected disabled) Country
+                  - for(i=1;i<21;i++)
+                    option(value=i) Country Name #{i}
+              .checkout__row--input
+                select
+                  option(value="0" selected disabled) Province
+                  - for(i=1;i<21;i++)
+                    option(value=i) Province Name #{i}
+            .checkout__row
+              .checkout__row--input
+                label Town/City
+                input(type="text", required)
+              .checkout__row--input
+                label Post code 
+                  span.muted (optional)
+                input(type="text")
+            p: button.btn.default Submit

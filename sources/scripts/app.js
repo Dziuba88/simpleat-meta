@@ -38,7 +38,7 @@
       showCloseBtn: true,
     });
 
-    $('.modal--inline').magnificPopup({
+    $('.modal--inline, .modal--edit').magnificPopup({
       type: 'inline',
       showCloseBtn: true,
     });
@@ -126,5 +126,54 @@
         $('input[name=signup__confirm]').addClass('error');
       }
     });
+    
+    $('[data-masked=cupon]').inputmask('*** *** *** ***');
+
+    $('.se__card--auth button').click(function () {
+      var email = $('input[name=auth__email]').val();
+      var password = $('input[name=auth__password]').val();
+      if(!email.match(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/)) {
+        $('input[name=auth__email]').addClass('error');
+      }
+      if (password.length < 6) {
+        $('input[name=auth__password]').addClass('error');
+      }
+    });
+
+    $('.se__card--auth input').focus(function () {
+      $(this).removeClass('error')
+    });
+
+
+    $('.se__card--checkout button').click(function () {
+      $('.se__card--checkout input[required]').each(function () {
+        if ($(this).val() == '') {
+          $(this).parent('.checkout__row--input').addClass('error')
+        }
+      });
+      $('.se__card--checkout select').each(function () {
+        if ($(this).find('option:selected').val() == 0) {
+          $(this).parent('.checkout__row--input').addClass('error')
+        }
+      });
+    });
+
+    $('.se__card--checkout input[required]').focus(function () {
+      $(this).parent('.checkout__row--input').removeClass('error')
+    });
+    $('.se__card--checkout input[required]').blur(function () {
+      if ($(this).val() == '') {
+        $(this).parent('.checkout__row--input').addClass('error')
+      }
+    });
+    $('.se__card--checkout select').change(function () {
+      if ($(this).find('option:selected').val() == 0) {
+        $(this).parent('.checkout__row--input').addClass('error')
+      }
+    });
+    $('.nice-select').click(function () {
+      $(this).parent('.checkout__row--input').removeClass('error')
+    });
 
   });
+  

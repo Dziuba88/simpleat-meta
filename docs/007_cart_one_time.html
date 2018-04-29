@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SIMPLEAT - Page Title</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="css/styles.min.css">
+  </head>
+  <body>
+    <div class="alert">
+      <div class="alert--body">
+        <svg class="alert__icon">
+          <use xlink:href="#info"></use>
+        </svg>
+        <div class="alert__text">This website uses cookies. The information in the cookies is used to provide the best experience for you on our website.</div>
+        <div class="alert__btn">I agree</div>
+      </div>
+    </div>
+    <header class="se__default--header">
+      <div class="navbar">
+        <div class="container">
+          <div class="navbar--wraper">
+            <div class="navbar--left">
+              <ul>
+                <li><a class="icon--lnk" href="">
+                    <svg>
+                      <use xlink:href="#basket"></use>
+                    </svg><span>Cart</span></a></li>
+                <li><a href="">Contact</a></li>
+              </ul>
+            </div>
+            <div class="navbar--center"><a class="brand">
+                <svg>
+                  <use xlink:href="#logo"></use>
+                </svg></a></div>
+            <div class="navbar--right">
+              <ul>
+                <li><a class="icon--lnk" href="">
+                    <svg>
+                      <use xlink:href="#user"></use>
+                    </svg><span>Sign in</span></a></li>
+                <li><a class="btn default" href="">Order now</a></li>
+              </ul>
+              <svg class="navbar--show">
+                <use xlink:href="#menu"></use>
+              </svg>
+            </div>
+            <div class="navbar--mobile">
+              <svg class="navbar--close">
+                <use xlink:href="#close"></use>
+              </svg>
+              <ul>
+                <li><a class="icon--lnk" href="">
+                    <svg>
+                      <use xlink:href="#basket"></use>
+                    </svg><span>Cart</span></a></li>
+                <li><a class="icon--lnk" href="">
+                    <svg>
+                      <use xlink:href="#user"></use>
+                    </svg><span>Sign in</span></a></li>
+                <li><a href="">Contact</a></li>
+                <li><a class="btn default" href="">Order now</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="se__default--main">
+      <section class="se__card">
+        <div class="container">
+          <div class="section__intro">
+            <h2>Shopping cart
+              <svg class="decor">
+                <use xlink:href="#decor"></use>
+              </svg>
+            </h2>
+          </div>
+          <div class="row custom--top">
+            <div class="col lg-6">
+              <div class="se__card--items">
+                <div class="items__header">
+                  <div class="items__header--product">Product</div>
+                  <div class="items__header--price">Price</div>
+                  <div class="items__header--count">Quantity</div>
+                  <div class="items__header--total">Total</div>
+                </div>
+                <div class="item"><a class="item__delete" href="">
+                    <svg>
+                      <use xlink:href="#delete"></use>
+                    </svg></a><img class="item__image" src="img/bottles.png" alt="">
+                  <div class="item__info"><strong>One-time order</strong><span>€ 12.00</span></div>
+                  <div class="item__count">
+                    <select>
+                      <option value="4">4</option>
+                      <option value="6">6</option>
+                      <option value="8">8</option>
+                      <option value="12" selected>12</option>
+                      <option value="24">24</option>
+                      <option value="48">48</option>
+                    </select>
+                  </div>
+                  <div class="item__price">€ 12.00</div>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="card_subscribe">
+                  <label for="card_subscribe"><span class="input">
+                      <svg>
+                        <use xlink:href="#check"></use>
+                      </svg></span><strong>Subscribe <span class="info">and save 5%</span></strong></label>
+                </div>
+                <div class="subscribe__info">By subscribing you will receive 12 bottles of Simpleat monthly.<br>You can cancel your subscription anytime.</div>
+              </div>
+              <div class="se__card--total">
+                <h2>Carts total</h2>
+                <div class="total__item"><strong>Shipping:</strong><span>€ 0.00 (free delivery over € 100)</span></div>
+                <div class="total__item"><strong>Total price:</strong><span>€ 0.00 (includes € 0.00 VAT)</span></div>
+                <div class="total__item"><strong>Coupon code:</strong><span>
+                    <input type="text" placeholder="XXX XXX XXX XXX" data-masked="cupon"></span></div>
+              </div>
+              <div class="se__card--payment"><a href="">
+                  <svg>
+                    <use xlink:href="#visa"></use>
+                  </svg></a><a href="">
+                  <svg>
+                    <use xlink:href="#mastercard"></use>
+                  </svg></a><a href="">
+                  <svg>
+                    <use xlink:href="#paypal"></use>
+                  </svg></a></div>
+            </div>
+            <div class="col lg-6">
+              <div class="se__card--auth">
+                <h2>Sign in with</h2>
+                <div class="social__auth"><a class="btn facebook" href="">
+                    <svg class="decor">
+                      <use xlink:href="#icon-facebook"></use>
+                    </svg><span>Facebook</span></a><a class="btn google">
+                    <svg class="decor">
+                      <use xlink:href="#icon-google"></use>
+                    </svg><span>Google</span></a></div>
+                <div class="auth__row">
+                  <div class="auth__row--input">
+                    <input type="email" placeholder="E-mail address" name="auth__email">
+                    <label class="error">This field is required</label>
+                  </div>
+                  <div class="auth__row--input">
+                    <input type="password" placeholder="Password" name="auth__password">
+                    <label class="error">This field is required</label>
+                  </div>
+                  <div class="auth__row--button">
+                    <button class="btn default">Sign in</button>
+                  </div>
+                </div>
+                <div class="auth__forgot"><a class="modal--edit" data-mfp-src="#forgot">Forgot your password?</a></div>
+              </div>
+              <div class="se__card--checkout">
+                <h2>New user? Enter your checkout details.</h2>
+                <div class="checkout__row">
+                  <div class="checkout__row--input">
+                    <label>First name</label>
+                    <input type="text" required>
+                  </div>
+                  <div class="checkout__row--input">
+                    <label>Last name</label>
+                    <input type="text" required>
+                  </div>
+                </div>
+                <div class="checkout__row">
+                  <div class="checkout__row--input">
+                    <label>E-mail</label>
+                    <input type="email" required>
+                  </div>
+                  <div class="checkout__row--input">
+                    <label>Phone</label>
+                    <input type="tel" required>
+                  </div>
+                </div>
+                <div class="checkout__row">
+                  <div class="checkout__row--input">
+                    <label>Street address</label>
+                    <input type="text" required>
+                  </div>
+                </div>
+                <div class="checkout__row">
+                  <div class="checkout__row--input">
+                    <select>
+                      <option value="0" selected disabled>Country</option>
+                      <option value="1">Country Name 1</option>
+                      <option value="2">Country Name 2</option>
+                      <option value="3">Country Name 3</option>
+                      <option value="4">Country Name 4</option>
+                      <option value="5">Country Name 5</option>
+                      <option value="6">Country Name 6</option>
+                      <option value="7">Country Name 7</option>
+                      <option value="8">Country Name 8</option>
+                      <option value="9">Country Name 9</option>
+                      <option value="10">Country Name 10</option>
+                      <option value="11">Country Name 11</option>
+                      <option value="12">Country Name 12</option>
+                      <option value="13">Country Name 13</option>
+                      <option value="14">Country Name 14</option>
+                      <option value="15">Country Name 15</option>
+                      <option value="16">Country Name 16</option>
+                      <option value="17">Country Name 17</option>
+                      <option value="18">Country Name 18</option>
+                      <option value="19">Country Name 19</option>
+                      <option value="20">Country Name 20</option>
+                    </select>
+                  </div>
+                  <div class="checkout__row--input">
+                    <select>
+                      <option value="0" selected disabled>Province</option>
+                      <option value="1">Province Name 1</option>
+                      <option value="2">Province Name 2</option>
+                      <option value="3">Province Name 3</option>
+                      <option value="4">Province Name 4</option>
+                      <option value="5">Province Name 5</option>
+                      <option value="6">Province Name 6</option>
+                      <option value="7">Province Name 7</option>
+                      <option value="8">Province Name 8</option>
+                      <option value="9">Province Name 9</option>
+                      <option value="10">Province Name 10</option>
+                      <option value="11">Province Name 11</option>
+                      <option value="12">Province Name 12</option>
+                      <option value="13">Province Name 13</option>
+                      <option value="14">Province Name 14</option>
+                      <option value="15">Province Name 15</option>
+                      <option value="16">Province Name 16</option>
+                      <option value="17">Province Name 17</option>
+                      <option value="18">Province Name 18</option>
+                      <option value="19">Province Name 19</option>
+                      <option value="20">Province Name 20</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="checkout__row">
+                  <div class="checkout__row--input">
+                    <label>Town/City</label>
+                    <input type="text" required>
+                  </div>
+                  <div class="checkout__row--input">
+                    <label>Post code <span class="muted">(optional)</span></label>
+                    <input type="text">
+                  </div>
+                </div>
+                <div class="checkout__row">
+                  <div class="checkbox">
+                    <input type="checkbox" id="different">
+                    <label for="different"><span class="input">
+                        <svg>
+                          <use xlink:href="#check"></use>
+                        </svg></span><strong>Different shipping address</strong></label>
+                  </div>
+                </div>
+                <div class="checkout__row">
+                  <div class="checkbox">
+                    <input type="checkbox" id="save">
+                    <label for="save"><span class="input">
+                        <svg>
+                          <use xlink:href="#check"></use>
+                        </svg></span><a class="text" tabindex="-1" data-show="popover" data-placement="top" data-content="&lt;p&gt;By subscribing you will receive 12 bottles of Simpleat monthly&lt;br/&gt;&lt;br/&gt;You can cancel your subscription anytime.&lt;/p&gt;"><strong>Save my information for future purchases</strong></a></label>
+                  </div>
+                </div>
+                <hr>
+                <div class="checkout__row">
+                  <div class="checkout__row--input">
+                    <label>First name</label>
+                    <input type="text" required>
+                  </div>
+                  <div class="checkout__row--input">
+                    <label>Last name</label>
+                    <input type="text" required>
+                  </div>
+                </div>
+                <div class="checkout__row">
+                  <div class="checkout__row--input">
+                    <label>E-mail</label>
+                    <input type="email" required>
+                  </div>
+                  <div class="checkout__row--input">
+                    <label>Phone</label>
+                    <input type="tel" required>
+                  </div>
+                </div>
+                <div class="checkout__row">
+                  <div class="checkout__row--input">
+                    <label>Street address</label>
+                    <input type="text" required>
+                  </div>
+                </div>
+                <div class="checkout__row">
+                  <div class="checkout__row--input">
+                    <select>
+                      <option value="0" selected disabled>Country</option>
+                      <option value="1">Country Name 1</option>
+                      <option value="2">Country Name 2</option>
+                      <option value="3">Country Name 3</option>
+                      <option value="4">Country Name 4</option>
+                      <option value="5">Country Name 5</option>
+                      <option value="6">Country Name 6</option>
+                      <option value="7">Country Name 7</option>
+                      <option value="8">Country Name 8</option>
+                      <option value="9">Country Name 9</option>
+                      <option value="10">Country Name 10</option>
+                      <option value="11">Country Name 11</option>
+                      <option value="12">Country Name 12</option>
+                      <option value="13">Country Name 13</option>
+                      <option value="14">Country Name 14</option>
+                      <option value="15">Country Name 15</option>
+                      <option value="16">Country Name 16</option>
+                      <option value="17">Country Name 17</option>
+                      <option value="18">Country Name 18</option>
+                      <option value="19">Country Name 19</option>
+                      <option value="20">Country Name 20</option>
+                    </select>
+                  </div>
+                  <div class="checkout__row--input">
+                    <select>
+                      <option value="0" selected disabled>Province</option>
+                      <option value="1">Province Name 1</option>
+                      <option value="2">Province Name 2</option>
+                      <option value="3">Province Name 3</option>
+                      <option value="4">Province Name 4</option>
+                      <option value="5">Province Name 5</option>
+                      <option value="6">Province Name 6</option>
+                      <option value="7">Province Name 7</option>
+                      <option value="8">Province Name 8</option>
+                      <option value="9">Province Name 9</option>
+                      <option value="10">Province Name 10</option>
+                      <option value="11">Province Name 11</option>
+                      <option value="12">Province Name 12</option>
+                      <option value="13">Province Name 13</option>
+                      <option value="14">Province Name 14</option>
+                      <option value="15">Province Name 15</option>
+                      <option value="16">Province Name 16</option>
+                      <option value="17">Province Name 17</option>
+                      <option value="18">Province Name 18</option>
+                      <option value="19">Province Name 19</option>
+                      <option value="20">Province Name 20</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="checkout__row">
+                  <div class="checkout__row--input">
+                    <label>Town/City</label>
+                    <input type="text" required>
+                  </div>
+                  <div class="checkout__row--input">
+                    <label>Post code <span class="muted">(optional)</span></label>
+                    <input type="text">
+                  </div>
+                </div>
+                <hr class="separator">
+                <div class="checkout__row">
+                  <div class="checkout__row--input">
+                    <label>Order notes <span class="muted">(optional)</span></label>
+                    <textarea></textarea>
+                  </div>
+                </div>
+                <button class="btn default">Checkout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="auth--popup mfp-hide" id="forgot">
+          <div class="se__card--checkout">
+            <h3>Password recovery</h3>
+            <div class="checkout__row">
+              <div class="checkout__row--input">
+                <label>E-mail</label>
+                <input type="email" required>
+              </div>
+            </div>
+            <p>
+              <button class="btn default">Reset my password</button>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="se__default--footer">
+      <div class="container">
+        <ul class="social">
+          <li><a href="https://www.facebook.com/" target="_blank">
+              <svg>
+                <use xlink:href="#facebook"></use>
+              </svg></a></li>
+          <li><a href="https://www.twitter.com/" target="_blank">
+              <svg>
+                <use xlink:href="#twitter"></use>
+              </svg></a></li>
+          <li><a href="https://www.instagram.com/" target="_blank">
+              <svg>
+                <use xlink:href="#instagram"></use>
+              </svg></a></li>
+        </ul>
+        <ul class="pages">
+          <li><a href="">Blog</a></li>
+          <li><a href="">FAQ</a></li>
+          <li><a href="">Legal</a></li>
+        </ul>
+        <div class="copyrights">© 2018, Simpleat</div>
+      </div>
+      <div class="contacts multilanguage">
+        <div class="container">
+          <div class="contacts--wraper">
+            <div class="contacts__items"><a href="">
+                <svg>
+                  <use xlink:href="#phone"></use>
+                </svg><span><strong>+123 456-789-000</strong><span>Every day from 8 AM - 8 PM</span></span></a><a href="">
+                <svg>
+                  <use xlink:href="#mail"></use>
+                </svg><span><strong>info@simleat.me</strong><span>We will respond ASAP</span></span></a></div>
+            <div class="language">
+              <div class="dropdown">
+                <button data-toggle="dropdown"><span class="text"><img src="img/en.png" alt=""><span>English</span></span>
+                  <svg class="caret">
+                    <use xlink:href="#caret"></use>
+                  </svg>
+                </button>
+                <div class="dropdown--menu">
+                  <ul>
+                    <li class="active"><a> <img src="img/en.png" alt=""><span>English</span></a></li>
+                    <li><a> <img src="img/en.png" alt=""><span>English</span></a></li>
+                    <li><a data-toggle="multilanguage">disable lalguage</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/plugins.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

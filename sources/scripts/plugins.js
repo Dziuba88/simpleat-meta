@@ -5,3 +5,4 @@
 //@prepros-append plugins/tabs.js
 //@prepros-append plugins/dropdown.js
 //@prepros-append plugins/collapse.js
+//@prepros-append plugins/inputmask.js

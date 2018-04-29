@@ -1,0 +1,104 @@
+extends models/layout-default
+block content
+  section.se__account
+    .container
+      .row
+        .col.sm-4
+          .se__account--nav
+            .nav__header
+              img(src="img/user.png", alt="")
+              p
+                span Welcome,
+                span user@example.com
+            .nav__body: ul
+                li.active: a(href="") Account details
+                li: a(href="") Addresses
+                li: a(href="") Orders
+                li: a(href="") Subscription
+                li: a(href="") Sign out
+        .col.sm-8
+          .section__intro
+            h2 Order details
+              svg.decor: use(xlink:href="#decor")
+          .se__account--order__details
+            .row
+              .col.md-8
+                .order__main
+                  .order--title Order reference 0002321
+                  a.pdf 
+                    svg: use(xlink:href="#pdf")
+                    span Download your invoice as PDF
+                  .order__main--list
+                    span Placed on:
+                    span September 7, 2017
+                    span Quantity:
+                    span 1
+                    span Total price:
+                    span € 12.00
+                    span Carrier:
+                    span GLS
+                    span Weight:
+                    span 0.15 kg
+                    span Shipping cost:
+                    span € 0.00
+                    span Tracking number:
+                    span -
+                    span Payment method:
+                    span PayPal
+                    span Next billing date:
+                    span October 7, 2017
+                  a.btn.default Reorder
+              .col.md-4
+                .panel--detail.processing
+                  .date 14/07/2017
+                  .info
+                    svg: use(xlink:href="#processing")
+                    span Processing
+                .panel--detail.delivered
+                  .date 14/07/2017
+                  .info
+                    svg: use(xlink:href="#delivered")
+                    span Delivered
+                .panel--detail.canceled
+                  .date 14/07/2017
+                  .info
+                    svg: use(xlink:href="#canceled")
+                    span Canceled
+                .panel--detail.transit
+                  .date 14/07/2017
+                  .info
+                    svg: use(xlink:href="#transit")
+                    span In transit
+            hr
+            .row
+              .col.md-6
+                .adress
+                  .adress--title Delivery address
+                  p Konstantin Konstantinopolski
+                  p Street address, 155 exterior
+                  p 1 exterior
+                  p 132143 Barcelone
+                  p Spain
+                  p Catalonia
+                  p +276 234 23 41 12
+              .col.md-6
+                .adress
+                  .adress--title Invoice address
+                  p Konstantin Konstantinopolski
+                  p Street address, 155 exterior
+                  p 1 exterior
+                  p 132143 Barcelone
+                  p Spain
+                  p Catalonia
+                  p +276 234 23 41 12
+            .message
+              .message--title Add a message
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              textarea(placeholder="Message")
+              button.btn.default Send message
+
+
+
+
+
+

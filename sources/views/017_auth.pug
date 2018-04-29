@@ -19,7 +19,7 @@ block content
                 span.input: svg: use(xlink:href="#check")
                 strong Remember me
             button.btn.default Sign in
-            p: a Lost your password?
+            p: a.modal--edit(data-mfp-src="#forgot") Lost your password?
         .col.md-6
           .section__intro
             h2 Register
@@ -41,3 +41,10 @@ block content
         a.btn.google
           svg.decor: use(xlink:href="#icon-google")
           span Google
+    #forgot.auth--popup.mfp-hide: .se__card--checkout
+      h3 Password recovery
+      .checkout__row
+        .checkout__row--input
+          label E-mail
+          input(type="email", required)
+      p: button.btn.default Reset my password

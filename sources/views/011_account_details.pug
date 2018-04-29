@@ -1,0 +1,63 @@
+extends models/layout-default
+block content
+  section.se__account
+    .container
+      .row
+        .col.sm-4
+          .se__account--nav
+            .nav__header
+              img(src="img/user.png", alt="")
+              p
+                span Welcome,
+                span user@example.com
+            .nav__body: ul
+                li.active: a(href="") Account details
+                li: a(href="") Addresses
+                li: a(href="") Orders
+                li: a(href="") Subscription
+                li: a(href="") Sign out
+        .col.sm-8
+          .section__intro
+            h2 My account
+              svg.decor: use(xlink:href="#decor")
+          .row
+            .col.md-6
+              .form__information
+                h2 Information
+                .form__input
+                  label First name
+                  input(type="text")
+                .form__input
+                  label Last name
+                  input(type="text")
+                .form__input
+                  label E-mail
+                  input(type="email")
+                .form__input
+                  label Phone
+                  input(type="tel")
+                button.btn.default Save changes
+            .col.md-6
+              .form__password
+                h3 Change your password
+                .form__input
+                  label Current password
+                  input(type="password")
+                .form__input
+                  label New password
+                  input(type="password")
+                .form__input
+                  label Repeat password
+                  input(type="password")
+                .form__input: a.modal--edit(data-mfp-src="#forgot") Forgot your password?
+                button.btn.default.modal--edit(data-mfp-src="#thanks") Change password
+    #forgot.auth--popup.mfp-hide: .se__card--checkout
+      h3 Password recovery
+      .checkout__row
+        .checkout__row--input
+          label E-mail
+          input(type="email", required)
+      p: button.btn.default Reset my password
+    #thanks.auth--popup.mfp-hide
+      h3 Success!
+      p You’ve changed your password successfully!

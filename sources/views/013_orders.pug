@@ -1,0 +1,112 @@
+extends models/layout-default
+block content
+  section.se__account
+    .container
+      .row
+        .col.sm-4
+          .se__account--nav
+            .nav__header
+              img(src="img/user.png", alt="")
+              p
+                span Welcome,
+                span user@example.com
+            .nav__body: ul
+                li.active: a(href="") Account details
+                li: a(href="") Addresses
+                li: a(href="") Orders
+                li: a(href="") Subscription
+                li: a(href="") Sign out
+        .col.sm-8
+          .section__intro
+            h2 Orders
+              svg.decor: use(xlink:href="#decor")
+          .row.orders--list
+            .col.md-6
+              .se__account--order
+                .order__header.processing
+                  .order--title
+                    strong 12 bottles
+                    span Total price: € 12.00
+                  .order--status
+                    svg: use(xlink:href="#processing")
+                    span Processing
+                .order__body
+                  .order--row 
+                    span Order number:
+                    span 000346346
+                  .order--row 
+                    span Order date:
+                    span september 7, 2018
+                  .order--row 
+                    span Payment method:
+                    span PayPal
+                  .order--row
+                    a.btn.default Details
+                    a.btn.default Reorder
+            .col.md-6
+              .se__account--order
+                .order__header.delivered
+                  .order--title
+                    strong 12 bottles
+                    span Total price: € 12.00
+                  .order--status
+                    svg: use(xlink:href="#delivered")
+                    span Delivered
+                .order__body
+                  .order--row 
+                    span Order number:
+                    span 000346346
+                  .order--row 
+                    span Order date:
+                    span september 7, 2018
+                  .order--row 
+                    span Payment method:
+                    span PayPal
+                  .order--row
+                    a.btn.default Details
+                    a.btn.default Reorder
+            .col.md-6
+              .se__account--order
+                .order__header.canceled
+                  .order--title
+                    strong 12 bottles
+                    span Total price: € 12.00
+                  .order--status
+                    svg: use(xlink:href="#canceled")
+                    span Canceled
+                .order__body
+                  .order--row 
+                    span Order number:
+                    span 000346346
+                  .order--row 
+                    span Order date:
+                    span september 7, 2018
+                  .order--row 
+                    span Payment method:
+                    span PayPal
+                  .order--row
+                    a.btn.default Details
+                    a.btn.default Reorder
+            .col.md-6
+              .se__account--order
+                .order__header.transit
+                  .order--title
+                    strong 12 bottles
+                    span Total price: € 12.00
+                  .order--status
+                    svg: use(xlink:href="#transit")
+                    span In transit
+                .order__body
+                  .order--row 
+                    span Order number:
+                    span 000346346
+                  .order--row 
+                    span Order date:
+                    span september 7, 2018
+                  .order--row 
+                    span Payment method:
+                    span PayPal
+                  .order--row
+                    a.btn.default Details
+                    a.btn.default Reorder
+          p.order--description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.

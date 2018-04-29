@@ -1,0 +1,176 @@
+extends models/layout-default
+block content
+  section.se__card
+    .container
+      .section__intro
+        h2 Shopping cart
+          svg.decor: use(xlink:href="#decor")
+      .row.custom--top
+        .col.lg-6
+          .se__card--items
+            .items__header
+              .items__header--product Product
+              .items__header--price Price
+              .items__header--count Quantity
+              .items__header--total Total
+            .item
+              a.item__delete(href=""): svg: use(xlink:href="#delete")
+              img.item__image(src="img/bottles.png", alt="")
+              .item__info
+                strong One-time order
+                span € 12.00
+              .item__count
+                select
+                  option(value="4") 4
+                  option(value="6") 6
+                  option(value="8") 8
+                  option(value="12" selected) 12
+                  option(value="24") 24
+                  option(value="48") 48
+              .item__price € 12.00
+            .checkbox
+              input(type="checkbox")#card_subscribe
+              label(for="card_subscribe")
+                span.input: svg: use(xlink:href="#check")
+                strong Subscribe 
+                  span.info and save 5%
+            .subscribe__info By subscribing you will receive 12 bottles of Simpleat monthly.<br>You can cancel your subscription anytime.
+          .se__card--total
+            h2 Carts total
+            .total__item
+              strong Shipping:
+              span € 0.00 (free delivery over € 100)
+            .total__item
+              strong Total price:
+              span € 0.00 (includes € 0.00 VAT)
+            .total__item
+              strong Coupon code:
+              span: input(type="text" placeholder="XXX XXX XXX XXX" data-masked="cupon")
+          .se__card--payment
+            a(href=""): svg: use(xlink:href="#visa")
+            a(href=""): svg: use(xlink:href="#mastercard")
+            a(href=""): svg: use(xlink:href="#paypal")
+
+        .col.lg-6
+          .se__card--auth
+            h2 Sign in with
+            .social__auth
+              a.btn.facebook(href="")
+                svg.decor: use(xlink:href="#icon-facebook")
+                span Facebook
+              a.btn.google
+                svg.decor: use(xlink:href="#icon-google")
+                span Google
+            .auth__row
+              .auth__row--input
+                input(type="email" placeholder="E-mail address", name="auth__email")
+                label.error This field is required
+              .auth__row--input
+                input(type="password" placeholder="Password", name="auth__password")
+                label.error This field is required
+              .auth__row--button: button.btn.default Sign in
+            .auth__forgot: a.modal--edit(data-mfp-src="#forgot") Forgot your password?
+          .se__card--checkout
+            h2 New user? Enter your checkout details.
+            .checkout__row
+              .checkout__row--input
+                label First name
+                input(type="text", required)
+              .checkout__row--input
+                label Last name
+                input(type="text", required)
+            .checkout__row
+              .checkout__row--input
+                label E-mail
+                input(type="email", required)
+              .checkout__row--input
+                label Phone
+                input(type="tel", required)
+            .checkout__row
+              .checkout__row--input
+                label Street address
+                input(type="text", required)
+            .checkout__row
+              .checkout__row--input
+                select
+                  option(value="0" selected disabled) Country
+                  - for(i=1;i<21;i++)
+                    option(value=i) Country Name #{i}
+              .checkout__row--input
+                select
+                  option(value="0" selected disabled) Province
+                  - for(i=1;i<21;i++)
+                    option(value=i) Province Name #{i}
+            .checkout__row
+              .checkout__row--input
+                label Town/City
+                input(type="text", required)
+              .checkout__row--input
+                label Post code 
+                  span.muted (optional)
+                input(type="text")
+            .checkout__row
+              .checkbox
+                input(type="checkbox")#different
+                label(for="different")
+                  span.input: svg: use(xlink:href="#check")
+                  strong Different shipping address
+            .checkout__row
+              .checkbox
+                input(type="checkbox")#save
+                label(for="save")
+                  span.input: svg: use(xlink:href="#check")
+                  a(tabindex="-1" data-show="popover" data-placement="top" data-content="<p>By subscribing you will receive 12 bottles of Simpleat monthly<br/><br/>You can cancel your subscription anytime.</p>").text
+                    strong Save my information for future purchases
+            hr
+            .checkout__row
+              .checkout__row--input
+                label First name
+                input(type="text", required)
+              .checkout__row--input
+                label Last name
+                input(type="text", required)
+            .checkout__row
+              .checkout__row--input
+                label E-mail
+                input(type="email", required)
+              .checkout__row--input
+                label Phone
+                input(type="tel", required)
+            .checkout__row
+              .checkout__row--input
+                label Street address
+                input(type="text", required)
+            .checkout__row
+              .checkout__row--input
+                select
+                  option(value="0" selected disabled) Country
+                  - for(i=1;i<21;i++)
+                    option(value=i) Country Name #{i}
+              .checkout__row--input
+                select
+                  option(value="0" selected disabled) Province
+                  - for(i=1;i<21;i++)
+                    option(value=i) Province Name #{i}
+            .checkout__row
+              .checkout__row--input
+                label Town/City
+                input(type="text", required)
+              .checkout__row--input
+                label Post code 
+                  span.muted (optional)
+                input(type="text")
+            hr.separator
+            .checkout__row
+              .checkout__row--input
+                label Order notes 
+                  span.muted (optional)
+                textarea
+            button.btn.default Checkout
+    #forgot.auth--popup.mfp-hide: .se__card--checkout
+      h3 Password recovery
+      .checkout__row
+        .checkout__row--input
+          label E-mail
+          input(type="email", required)
+      p: button.btn.default Reset my password

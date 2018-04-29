@@ -70,76 +70,114 @@
       </div>
     </header>
     <main class="se__default--main">
-      <section class="se__auth">
+      <section class="se__account">
         <div class="container">
           <div class="row">
-            <div class="col md-6">
-              <div class="section__intro">
-                <h2>Sign in
-                  <svg class="decor">
-                    <use xlink:href="#decor"></use>
-                  </svg>
-                </h2>
-                <p>Sign in to your account</p>
-              </div>
-              <div class="se__auth--form" id="signin">
-                <input type="email" placeholder="Your e-mail" name="signin__email">
-                <label class="error">Please enter valid e-Mail</label>
-                <input type="password" placeholder="Password" name="signin__password">
-                <label class="error">Password must be 6 characters min</label>
-                <div class="checkbox">
-                  <input type="checkbox" id="remember">
-                  <label for="remember"><span class="input">
-                      <svg>
-                        <use xlink:href="#check"></use>
-                      </svg></span><strong>Remember me</strong></label>
+            <div class="col sm-4">
+              <div class="se__account--nav">
+                <div class="nav__header"><img src="img/user.png" alt="">
+                  <p><span>Welcome,</span><span>user@example.com</span></p>
                 </div>
-                <button class="btn default">Sign in</button>
-                <p><a class="modal--edit" data-mfp-src="#forgot">Lost your password?</a></p>
+                <div class="nav__body">
+                  <ul>
+                    <li class="active"><a href="">Account details</a></li>
+                    <li><a href="">Addresses</a></li>
+                    <li><a href="">Orders</a></li>
+                    <li><a href="">Subscription</a></li>
+                    <li><a href="">Sign out</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="col md-6">
+            <div class="col sm-8">
               <div class="section__intro">
-                <h2>Register
+                <h2>Order details
                   <svg class="decor">
                     <use xlink:href="#decor"></use>
                   </svg>
                 </h2>
-                <p>Create a new account</p>
               </div>
-              <div class="se__auth--form" id="signup">
-                <input type="email" placeholder="Your e-mail" name="signup__email">
-                <label class="error">Please enter valid e-Mail</label>
-                <input type="password" placeholder="Password" name="signup__password">
-                <label class="error">Password must be 6 characters min</label>
-                <input type="password" placeholder="Confirm password" name="signup__confirm">
-                <label class="error">The password fields didn't match.</label>
-                <button class="btn default">Register</button>
+              <div class="se__account--order__details">
+                <div class="row">
+                  <div class="col md-8">
+                    <div class="order__main">
+                      <div class="order--title">Order reference 0002321</div><a class="pdf"> 
+                        <svg>
+                          <use xlink:href="#pdf"></use>
+                        </svg><span>Download your invoice as PDF</span></a>
+                      <div class="order__main--list"><span>Placed on:</span><span>September 7, 2017</span><span>Quantity:</span><span>1</span><span>Total price:</span><span>€ 12.00</span><span>Carrier:</span><span>GLS</span><span>Weight:</span><span>0.15 kg</span><span>Shipping cost:</span><span>€ 0.00</span><span>Tracking number:</span><span>-</span><span>Payment method:</span><span>PayPal</span></div><a class="btn default">Reorder</a>
+                    </div>
+                  </div>
+                  <div class="col md-4">
+                    <div class="panel--detail processing">
+                      <div class="date">14/07/2017</div>
+                      <div class="info">
+                        <svg>
+                          <use xlink:href="#processing"></use>
+                        </svg><span>Processing</span>
+                      </div>
+                    </div>
+                    <div class="panel--detail delivered">
+                      <div class="date">14/07/2017</div>
+                      <div class="info">
+                        <svg>
+                          <use xlink:href="#delivered"></use>
+                        </svg><span>Delivered</span>
+                      </div>
+                    </div>
+                    <div class="panel--detail canceled">
+                      <div class="date">14/07/2017</div>
+                      <div class="info">
+                        <svg>
+                          <use xlink:href="#canceled"></use>
+                        </svg><span>Canceled</span>
+                      </div>
+                    </div>
+                    <div class="panel--detail transit">
+                      <div class="date">14/07/2017</div>
+                      <div class="info">
+                        <svg>
+                          <use xlink:href="#transit"></use>
+                        </svg><span>In transit</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col md-6">
+                    <div class="adress">
+                      <div class="adress--title">Delivery address</div>
+                      <p>Konstantin Konstantinopolski</p>
+                      <p>Street address, 155 exterior</p>
+                      <p>1 exterior</p>
+                      <p>132143 Barcelone</p>
+                      <p>Spain</p>
+                      <p>Catalonia</p>
+                      <p>+276 234 23 41 12</p>
+                    </div>
+                  </div>
+                  <div class="col md-6">
+                    <div class="adress">
+                      <div class="adress--title">Invoice address</div>
+                      <p>Konstantin Konstantinopolski</p>
+                      <p>Street address, 155 exterior</p>
+                      <p>1 exterior</p>
+                      <p>132143 Barcelone</p>
+                      <p>Spain</p>
+                      <p>Catalonia</p>
+                      <p>+276 234 23 41 12</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="message">
+                  <div class="message--title">Add a message</div>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  <textarea placeholder="Message"></textarea>
+                  <button class="btn default">Send message</button>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="se__auth--social">
-            <p>For easier checkout, sing in or register using your social account</p><a class="btn facebook" href="">
-              <svg class="decor">
-                <use xlink:href="#icon-facebook"></use>
-              </svg><span>Facebook</span></a><a class="btn google">
-              <svg class="decor">
-                <use xlink:href="#icon-google"></use>
-              </svg><span>Google</span></a>
-          </div>
-        </div>
-        <div class="auth--popup mfp-hide" id="forgot">
-          <div class="se__card--checkout">
-            <h3>Password recovery</h3>
-            <div class="checkout__row">
-              <div class="checkout__row--input">
-                <label>E-mail</label>
-                <input type="email" required>
-              </div>
-            </div>
-            <p>
-              <button class="btn default">Reset my password</button>
-            </p>
           </div>
         </div>
       </section>

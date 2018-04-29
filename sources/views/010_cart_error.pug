@@ -1,0 +1,15 @@
+extends models/layout-default
+block content
+  section.se__card
+    .container
+      .section__intro
+        h2 Shopping cart
+          svg.decor: use(xlink:href="#decor")
+      .row
+        .col.md-6.offset-md-3.sm-8.offset-sm-2
+          .se__card--wraper.error
+            .se__card--content
+              h3 Order processing failed
+              p Review the error message and try again.
+              .error--message Card holder has left the building
+              a.btn.default Return to shop

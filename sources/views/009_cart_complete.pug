@@ -1,0 +1,26 @@
+extends models/layout-default
+block content
+  section.se__card
+    .container
+      .section__intro
+        h2 Shopping cart
+          svg.decor: use(xlink:href="#decor")
+      .row
+        .col.md-6.offset-md-3.sm-8.offset-sm-2
+          .se__card--wraper.complete
+            .se__card--content
+              h3 Congratulations!<br>Your order has been placed.
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              .complete--message
+                strong Product:
+                span 12 bottles
+                strong Order number:
+                span 00123123
+                strong Payment method:
+                span PayPal
+                strong Total price:
+                span € 0.00 (includes € 0.00 VAT)
+                strong Recurring total:
+                span € 0.00/month
+                  small (first renewal: Sep 25, 2017)
+              a.btn.default Continue shopping

@@ -8,27 +8,39 @@
   position: relative;
   transition: all 0.2s ease-in-out;
   user-select: none;
-  white-space: nowrap;
   height: 50px;
-  display: flex;
-  align-items: center;
 
   .current {
-    flex: 1;
+    display: block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     padding-left: 15px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 25px;
+    width: 100%;
+  }
+
+  &.big .current {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 30px;
   }
 
   .caret {
     display: block;
     width: 16px;
     height: 24px;
-    flex: none;
-    margin-right: 15px;
     fill: #e5e4d7;
     transition: all 0.2s ease-in-out;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+  }
+  &.big .caret {
+    top: 18px;
   }
 
   &.open {

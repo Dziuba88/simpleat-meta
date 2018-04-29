@@ -70,76 +70,109 @@
       </div>
     </header>
     <main class="se__default--main">
-      <section class="se__auth">
+      <section class="se__account">
         <div class="container">
           <div class="row">
-            <div class="col md-6">
-              <div class="section__intro">
-                <h2>Sign in
-                  <svg class="decor">
-                    <use xlink:href="#decor"></use>
-                  </svg>
-                </h2>
-                <p>Sign in to your account</p>
-              </div>
-              <div class="se__auth--form" id="signin">
-                <input type="email" placeholder="Your e-mail" name="signin__email">
-                <label class="error">Please enter valid e-Mail</label>
-                <input type="password" placeholder="Password" name="signin__password">
-                <label class="error">Password must be 6 characters min</label>
-                <div class="checkbox">
-                  <input type="checkbox" id="remember">
-                  <label for="remember"><span class="input">
-                      <svg>
-                        <use xlink:href="#check"></use>
-                      </svg></span><strong>Remember me</strong></label>
+            <div class="col sm-4">
+              <div class="se__account--nav">
+                <div class="nav__header"><img src="img/user.png" alt="">
+                  <p><span>Welcome,</span><span>user@example.com</span></p>
                 </div>
-                <button class="btn default">Sign in</button>
-                <p><a class="modal--edit" data-mfp-src="#forgot">Lost your password?</a></p>
+                <div class="nav__body">
+                  <ul>
+                    <li class="active"><a href="">Account details</a></li>
+                    <li><a href="">Addresses</a></li>
+                    <li><a href="">Orders</a></li>
+                    <li><a href="">Subscription</a></li>
+                    <li><a href="">Sign out</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="col md-6">
+            <div class="col sm-8">
               <div class="section__intro">
-                <h2>Register
+                <h2>Orders
                   <svg class="decor">
                     <use xlink:href="#decor"></use>
                   </svg>
                 </h2>
-                <p>Create a new account</p>
               </div>
-              <div class="se__auth--form" id="signup">
-                <input type="email" placeholder="Your e-mail" name="signup__email">
-                <label class="error">Please enter valid e-Mail</label>
-                <input type="password" placeholder="Password" name="signup__password">
-                <label class="error">Password must be 6 characters min</label>
-                <input type="password" placeholder="Confirm password" name="signup__confirm">
-                <label class="error">The password fields didn't match.</label>
-                <button class="btn default">Register</button>
+              <div class="row orders--list">
+                <div class="col md-6">
+                  <div class="se__account--order">
+                    <div class="order__header processing">
+                      <div class="order--title"><strong>12 bottles</strong><span>Total price: € 12.00</span></div>
+                      <div class="order--status">
+                        <svg>
+                          <use xlink:href="#processing"></use>
+                        </svg><span>Processing</span>
+                      </div>
+                    </div>
+                    <div class="order__body">
+                      <div class="order--row"> <span>Order number:</span><span>000346346</span></div>
+                      <div class="order--row"> <span>Order date:</span><span>september 7, 2018</span></div>
+                      <div class="order--row"> <span>Payment method:</span><span>PayPal</span></div>
+                      <div class="order--row"><a class="btn default">Details</a><a class="btn default">Reorder</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col md-6">
+                  <div class="se__account--order">
+                    <div class="order__header delivered">
+                      <div class="order--title"><strong>12 bottles</strong><span>Total price: € 12.00</span></div>
+                      <div class="order--status">
+                        <svg>
+                          <use xlink:href="#delivered"></use>
+                        </svg><span>Delivered</span>
+                      </div>
+                    </div>
+                    <div class="order__body">
+                      <div class="order--row"> <span>Order number:</span><span>000346346</span></div>
+                      <div class="order--row"> <span>Order date:</span><span>september 7, 2018</span></div>
+                      <div class="order--row"> <span>Payment method:</span><span>PayPal</span></div>
+                      <div class="order--row"><a class="btn default">Details</a><a class="btn default">Reorder</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col md-6">
+                  <div class="se__account--order">
+                    <div class="order__header canceled">
+                      <div class="order--title"><strong>12 bottles</strong><span>Total price: € 12.00</span></div>
+                      <div class="order--status">
+                        <svg>
+                          <use xlink:href="#canceled"></use>
+                        </svg><span>Canceled</span>
+                      </div>
+                    </div>
+                    <div class="order__body">
+                      <div class="order--row"> <span>Order number:</span><span>000346346</span></div>
+                      <div class="order--row"> <span>Order date:</span><span>september 7, 2018</span></div>
+                      <div class="order--row"> <span>Payment method:</span><span>PayPal</span></div>
+                      <div class="order--row"><a class="btn default">Details</a><a class="btn default">Reorder</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col md-6">
+                  <div class="se__account--order">
+                    <div class="order__header transit">
+                      <div class="order--title"><strong>12 bottles</strong><span>Total price: € 12.00</span></div>
+                      <div class="order--status">
+                        <svg>
+                          <use xlink:href="#transit"></use>
+                        </svg><span>In transit</span>
+                      </div>
+                    </div>
+                    <div class="order__body">
+                      <div class="order--row"> <span>Order number:</span><span>000346346</span></div>
+                      <div class="order--row"> <span>Order date:</span><span>september 7, 2018</span></div>
+                      <div class="order--row"> <span>Payment method:</span><span>PayPal</span></div>
+                      <div class="order--row"><a class="btn default">Details</a><a class="btn default">Reorder</a></div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <p class="order--description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
             </div>
-          </div>
-          <div class="se__auth--social">
-            <p>For easier checkout, sing in or register using your social account</p><a class="btn facebook" href="">
-              <svg class="decor">
-                <use xlink:href="#icon-facebook"></use>
-              </svg><span>Facebook</span></a><a class="btn google">
-              <svg class="decor">
-                <use xlink:href="#icon-google"></use>
-              </svg><span>Google</span></a>
-          </div>
-        </div>
-        <div class="auth--popup mfp-hide" id="forgot">
-          <div class="se__card--checkout">
-            <h3>Password recovery</h3>
-            <div class="checkout__row">
-              <div class="checkout__row--input">
-                <label>E-mail</label>
-                <input type="email" required>
-              </div>
-            </div>
-            <p>
-              <button class="btn default">Reset my password</button>
-            </p>
           </div>
         </div>
       </section>
