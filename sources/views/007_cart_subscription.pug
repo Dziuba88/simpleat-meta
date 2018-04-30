@@ -17,8 +17,8 @@ block content
               a.item__delete(href=""): svg: use(xlink:href="#delete")
               img.item__image(src="img/bottles.png", alt="")
               .item__info
-                strong One-time order
-                span € 12.00
+                strong Subscription
+                span € 12.00/month
               .item__count
                 select
                   option(value="4") 4
@@ -27,22 +27,25 @@ block content
                   option(value="12" selected) 12
                   option(value="24") 24
                   option(value="48") 48
-              .item__price € 12.00
-            .checkbox
+              .item__price € 12.00 <small>per month</small>
+            //.checkbox
               input(type="checkbox")#card_subscribe
               label(for="card_subscribe")
                 span.input: svg: use(xlink:href="#check")
                 strong Subscribe 
                   span.info and save 5%
-            .subscribe__info By subscribing you will receive 12 bottles of Simpleat monthly.<br>You can cancel your subscription anytime.
+            //.subscribe__info By subscribing you will receive 12 bottles of Simpleat monthly.<br>You can cancel your subscription anytime.
           .se__card--total
-            h2 Carts total
+            h2 Total
             .total__item
               strong Shipping:
               span € 0.00 (free delivery over € 100)
             .total__item
               strong Total price:
               span € 0.00 (includes € 0.00 VAT)
+            .total__item
+              strong Recurring total:
+              span € 0.00/month (first renewal: Sep 25, 2017)
             .total__item
               strong Coupon code:
               span: input(type="text" placeholder="XXX XXX XXX XXX" data-masked="cupon")

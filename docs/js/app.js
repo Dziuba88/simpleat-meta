@@ -22,7 +22,8 @@
     $('[data-show="popover"]').popover({
       html : true,
       placement: "top",
-      trigger: "focus",
+      trigger: "hover",
+      delay: { show: 100, hide: 1000 },
       template: '<div class="popover" role="tooltip"><div class="popover-content"></div></div>'
     });
 
@@ -41,6 +42,14 @@
     $('.modal--inline, .modal--edit').magnificPopup({
       type: 'inline',
       showCloseBtn: true,
+      callbacks: {
+        beforeOpen: function() {
+          jQuery('body').css('overflow', 'hidden');
+        },
+        beforeClose: function() {
+          jQuery('body').css('overflow', '');
+        }
+      }
     });
 
     $('.se__join button').click(function (e) {

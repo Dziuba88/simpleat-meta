@@ -499,6 +499,7 @@ a {
 
 .se__hero {
   padding: 100px 0;
+  @include smallDown {padding: 50px 0;}
 
   img {
     display: block;
@@ -532,6 +533,7 @@ a {
 .se__what {
   padding: 100px 0 70px;
   background-color: #36c1ba;
+  @include smallDown {padding: 50px 0 20px;}
 
   .section__intro {
     h2, p {color: #ffffff;}
@@ -587,6 +589,7 @@ a {
 .se__why {
   padding: 100px 0;
   text-align: center;
+  @include smallDown {padding: 50px 0;}
 
   .why--item {
     .img {
@@ -644,6 +647,7 @@ a {
   padding: 100px 0 70px;
   text-align: center;
   background-color: #f0f6f4;
+  @include smallDown {padding: 50px 0 20px;}
 
   .testimonial--item {
     position: relative;
@@ -763,6 +767,7 @@ a {
 
 .se__ingredients {
   padding: 100px 0;
+  @include smallDown {padding: 50px 0;}
 
   .container {
     padding: 0 20px;
@@ -820,6 +825,7 @@ a {
 .se__facts {
   padding: 100px 0;
   background-color: #f0f6f4;
+  @include smallDown {padding: 50px 0;}
 
   .facts--img {
     display: block;
@@ -916,6 +922,7 @@ a {
 .se__chart {
   padding: 100px 0;
   text-align: center;
+  @include smallDown {padding: 50px 0;}
 
   img {
     display: block;
@@ -926,6 +933,7 @@ a {
 .se__table {
   padding: 100px 0;
   background-color: #f0f6f4;
+  @include smallDown {padding: 50px 0;}
 
   &--footer {
     text-align: center;
@@ -1067,6 +1075,7 @@ a {
 
 .se__join {
   padding: 100px 0 70px;
+  @include smallDown {padding: 50px 0 20px;}
 
   &--form {
     .col {
@@ -1094,10 +1103,10 @@ a {
       transition: .15s ease-in-out;
       margin-bottom: 30px;
 
-      &::-webkit-input-placeholder {color: #121920;opacity: 1;}
-      &::-moz-placeholder {color: #121920;opacity: 1;}
-      &:-ms-input-placeholder {color: #121920;opacity: 1;}
-      &:-moz-placeholder {color: #121920;opacity: 1;}
+      &::-webkit-input-placeholder {color: #888c8f;opacity: 1;}
+      &::-moz-placeholder {color: #888c8f;opacity: 1;}
+      &:-ms-input-placeholder {color: #888c8f;opacity: 1;}
+      &:-moz-placeholder {color: #888c8f;opacity: 1;}
 
       &:focus {
         &::-webkit-input-placeholder {color: transparent;}
@@ -1107,13 +1116,8 @@ a {
       }
 
       &.error {
-        background-color: #d64b4b;
-        color: #ffffff;
-        &::-webkit-input-placeholder {color: #ffffff;opacity: 1;}
-        &::-moz-placeholder {color: #ffffff;opacity: 1;}
-        &:-ms-input-placeholder {color: #ffffff;opacity: 1;}
-        &:-moz-placeholder {color: #ffffff;opacity: 1;}
-  
+        border-color: #d64b4b;
+
         + span.error {
           opacity: 1;
         }
@@ -1131,6 +1135,7 @@ a {
 
 .se__blog {
   padding: 60px 0;
+  @include smallDown {padding: 30px 0;}
   h1 {
     font-size: 40px;
     line-height: 1;
@@ -1408,6 +1413,7 @@ a {
 
 .se__legal {
   padding: 60px 0;
+  @include smallDown {padding: 30px 0;}
 
   p {
     font-size: 16px;
@@ -1466,6 +1472,7 @@ a {
 
 .se__contact {
   padding: 60px 0;
+  @include smallDown {padding: 30px 0;}
 
   .section__intro {
     margin-bottom: 40px;
@@ -1505,10 +1512,10 @@ a {
         transition: .15s ease-in-out;
       }
 
-      &::-webkit-input-placeholder {color: #121920;opacity: 1;}
-      &::-moz-placeholder {color: #121920;opacity: 1;}
-      &:-ms-input-placeholder {color: #121920;opacity: 1;}
-      &:-moz-placeholder {color: #121920;opacity: 1;}
+      &::-webkit-input-placeholder {color: #888c8f;opacity: 1;}
+      &::-moz-placeholder {color: #888c8f;opacity: 1;}
+      &:-ms-input-placeholder {color: #888c8f;opacity: 1;}
+      &:-moz-placeholder {color: #888c8f;opacity: 1;}
 
       &:focus {
         &::-webkit-input-placeholder {color: transparent;}
@@ -1518,12 +1525,7 @@ a {
       }
 
       &.error {
-        background-color: #d64b4b;
-        color: #ffffff;
-        &::-webkit-input-placeholder {color: #ffffff;opacity: 1;}
-        &::-moz-placeholder {color: #ffffff;opacity: 1;}
-        &:-ms-input-placeholder {color: #ffffff;opacity: 1;}
-        &:-moz-placeholder {color: #ffffff;opacity: 1;}
+        border-color: #d64b4b;
   
         + label {
           height: auto;opacity: 1;
@@ -1578,6 +1580,7 @@ a {
 
 .se__faq {
   padding: 60px 0;
+  @include smallDown {padding: 30px 0;}
   .section__intro {
     margin-bottom: 40px;
     h2 {font-size: 40px;}
@@ -1586,6 +1589,7 @@ a {
 
 .se__auth {
   padding: 60px 0;
+  @include smallDown {padding: 30px 0;}
 
   .section__intro {
     margin-bottom: 40px;
@@ -1639,10 +1643,10 @@ a {
         transition: .15s ease-in-out;
       }
 
-      &::-webkit-input-placeholder {color: #121920;opacity: 1;}
-      &::-moz-placeholder {color: #121920;opacity: 1;}
-      &:-ms-input-placeholder {color: #121920;opacity: 1;}
-      &:-moz-placeholder {color: #121920;opacity: 1;}
+      &::-webkit-input-placeholder {color: #888c8f;opacity: 1;}
+      &::-moz-placeholder {color: #888c8f;opacity: 1;}
+      &:-ms-input-placeholder {color: #888c8f;opacity: 1;}
+      &:-moz-placeholder {color: #888c8f;opacity: 1;}
 
       &:focus {
         &::-webkit-input-placeholder {color: transparent;}
@@ -1652,12 +1656,8 @@ a {
       }
 
       &.error {
-        background-color: #d64b4b;
-        color: #ffffff;
-        &::-webkit-input-placeholder {color: #ffffff;opacity: 1;}
-        &::-moz-placeholder {color: #ffffff;opacity: 1;}
-        &:-ms-input-placeholder {color: #ffffff;opacity: 1;}
-        &:-moz-placeholder {color: #ffffff;opacity: 1;}
+        border-color: #d64b4b;
+        
   
         + label {
           height: auto;opacity: 1;
@@ -1708,6 +1708,7 @@ a {
 .se__404 {
   padding: 60px 0;
   text-align: center;
+  @include smallDown {padding: 30px 0;}
 
   .section__intro {
     margin-bottom: 0;
@@ -1737,6 +1738,7 @@ a {
 
 .se__card {
   padding: 60px 0;
+  @include smallDown {padding: 30px 0;}
 
   .section__intro {
     margin-bottom: 20px;
@@ -1940,11 +1942,21 @@ a {
         width: 140px;
         flex: none;
         padding-left: 20px;
+
+        small {
+          display: block;
+          padding-top: 5px;
+          font-size: 13px;
+          color: #87898c;
+        }
       }
 
       @include smallDown {
         flex-wrap: wrap;
-
+        &__info {
+          flex: none;
+          width: calc(100% - 100px);
+        }
         &__count, &__price {
           padding: 10px 0 0 20px;
           width: 50%;
@@ -2293,6 +2305,7 @@ a {
 
 .se__account {
   padding: 60px 0;
+  @include smallDown {padding: 30px 0;}
 
   .section__intro {
     margin-bottom: 40px;

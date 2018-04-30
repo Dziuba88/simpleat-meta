@@ -92,7 +92,7 @@
                     <svg>
                       <use xlink:href="#delete"></use>
                     </svg></a><img class="item__image" src="img/bottles.png" alt="">
-                  <div class="item__info"><strong>One-time order</strong><span>€ 12.00</span></div>
+                  <div class="item__info"><strong>Subscription</strong><span>€ 12.00/month</span></div>
                   <div class="item__count">
                     <select>
                       <option value="4">4</option>
@@ -103,21 +103,22 @@
                       <option value="48">48</option>
                     </select>
                   </div>
-                  <div class="item__price">€ 12.00</div>
+                  <div class="item__price">€ 12.00 <small>per month</small></div>
                 </div>
-                <div class="checkbox">
-                  <input type="checkbox" id="card_subscribe">
-                  <label for="card_subscribe"><span class="input">
-                      <svg>
-                        <use xlink:href="#check"></use>
-                      </svg></span><strong>Subscribe <span class="info">and save 5%</span></strong></label>
-                </div>
-                <div class="subscribe__info">By subscribing you will receive 12 bottles of Simpleat monthly.<br>You can cancel your subscription anytime.</div>
+                <!--.checkbox
+                input(type="checkbox")#card_subscribe
+                label(for="card_subscribe")
+                  span.input: svg: use(xlink:href="#check")
+                  strong Subscribe 
+                    span.info and save 5%
+                -->
+                <!--.subscribe__info By subscribing you will receive 12 bottles of Simpleat monthly.<br>You can cancel your subscription anytime.-->
               </div>
               <div class="se__card--total">
-                <h2>Carts total</h2>
+                <h2>Total</h2>
                 <div class="total__item"><strong>Shipping:</strong><span>€ 0.00 (free delivery over € 100)</span></div>
                 <div class="total__item"><strong>Total price:</strong><span>€ 0.00 (includes € 0.00 VAT)</span></div>
+                <div class="total__item"><strong>Recurring total:</strong><span>€ 0.00/month (first renewal: Sep 25, 2017)</span></div>
                 <div class="total__item"><strong>Coupon code:</strong><span>
                     <input type="text" placeholder="XXX XXX XXX XXX" data-masked="cupon"></span></div>
               </div>
