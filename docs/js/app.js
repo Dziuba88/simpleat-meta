@@ -44,10 +44,10 @@
       showCloseBtn: true,
       callbacks: {
         beforeOpen: function() {
-          jQuery('body').css('overflow', 'hidden');
+          $('html, body').css('overflow', 'hidden');
         },
         beforeClose: function() {
-          jQuery('body').css('overflow', '');
+          $('html, body').css('overflow', '');
         }
       }
     });
