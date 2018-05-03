@@ -1,0 +1,138 @@
+@import 'assets/normalize';
+
+body {
+  background-color: #ffffff;
+  color: #121920;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 975px;
+  //max-width: 100%;
+  margin: 0 auto;
+}
+
+.invoice {
+  &__header {
+    text-align: center;
+    background-color: #f0f6f4;
+    padding: 15px;
+  }
+
+  &__body {
+    padding: 85px 0 65px;
+  }
+
+  &__footer {
+    font-size: 14px;
+    line-height: 20px;
+    color: #45494e;
+
+    .container {
+      display: flex;
+      align-items: center;
+
+      .col {
+        padding-left: 30px;
+        flex: none;
+
+        &--flex {
+          flex: 1;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  &--table {
+    display: flex;
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 70px;
+
+    &__col1, &__col3 {
+      width: 35%;
+    }
+
+    &__col2 {
+      width: 30%;
+    }
+
+    &__col3 {
+      text-align: right;
+    }
+
+    &__th {
+      font-weight: 700;
+      color: #45494e;
+    }
+
+    &__td {
+      color: #1b1f25;
+    }
+
+    &__th, &__td {
+      min-height: 20px;
+      margin-bottom: 14px;
+    }
+
+    &__total {
+      color: #1b1f25;
+      font-size: 40px;
+      line-height: 1;
+    }
+  }
+
+  &--summary {
+    display: flex;
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 40px;
+
+    &__col1 {
+      width: 40%;
+    }
+    &__col2, &__col3, &__col4 {
+      width: 20%;
+    }
+
+    &__col4 {
+      text-align: right;
+    }
+
+    &__th {
+      font-weight: 700;
+      color: #45494e;
+      border-bottom: 4px solid #74c0b9;
+      padding-bottom: 15px;
+    }
+
+    &__td {
+      border-bottom: 1px solid #e7e7e7;
+      color: #1b1f25;
+      padding: 15px 0;
+    }
+
+    &__col1 &__td {font-weight: 700;}
+  }
+
+  &--total {
+    display: flex;
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: right;
+
+    &__col1 {
+      width: 70%;
+      font-weight: 700;
+      color: #45494e;
+    }
+    &__col2 {
+      width: 30%;
+      color: #1b1f25;
+    }
+
+    &__col2 &__th {font-weight: 700;}
+  }
+}

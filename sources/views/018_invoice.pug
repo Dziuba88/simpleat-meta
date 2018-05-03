@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Invoice Document
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:400,700")
+    link(rel="stylesheet", href="css/invoice.min.css")
+  body
+    .invoice__header: a(href=""): img(src="img/invoice/logo.png", alt="")
+    .invoice__body
+      .container
+        .invoice--table
+          .invoice--table__col1
+            .invoice--table__th Billed to
+            .invoice--table__td First name, Last name
+            .invoice--table__td Street address
+            .invoice--table__td Country, Province, Town/City
+            .invoice--table__td POST CODE
+          .invoice--table__col2
+            .invoice--table__th Invoice number
+            .invoice--table__td 00001
+            .invoice--table__td  
+            .invoice--table__th Date Of Issue
+            .invoice--table__td 21/08/2018
+          .invoice--table__col3
+            .invoice--table__th Invoice total
+            .invoice--table__total € 144.00
+        .invoice--summary
+          .invoice--summary__col1
+            .invoice--summary__th Product
+            .invoice--summary__td Simpleat Bottle
+          .invoice--summary__col2
+            .invoice--summary__th Price
+            .invoice--summary__td € 12.00
+          .invoice--summary__col3
+            .invoice--summary__th Quantity
+            .invoice--summary__td 12
+          .invoice--summary__col4
+            .invoice--summary__th Total
+            .invoice--summary__td € 144.00
+        .invoice--total
+          .invoice--total__col1
+            .invoice--total__th Shipping:
+          .invoice--total__col2
+            .invoice--total__th € 0.00
+            .invoice--total__td free delivery over € 100
+        .invoice--total
+          .invoice--total__col1
+            .invoice--total__th Total price:
+          .invoice--total__col2
+            .invoice--total__th € 144.00
+            .invoice--total__td includes € 0.00 VAT
+    .invoice__footer: .container
+      .col--flex: a(href=""): img(src="img/invoice/logo.png", alt="")
+      .col Street 12<br>1234 AB, City<br>The Country
+      .col www.simpleat.com<br>info@simpleat.com<br>+12(0)34 56 789 00
+      .col Chamber of Commerce: 12345678<br>VAT: J54346JK3H4K4J45<br>Bank: J54346JK3H4K4J45
