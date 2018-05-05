@@ -32,7 +32,7 @@
     })
 
     $('.modal--video').magnificPopup({
-      disableOn: 700,
+      //disableOn: 700,
       type: 'iframe',
       removalDelay: 160,
       preloader: false,
@@ -42,14 +42,15 @@
     $('.modal--inline, .modal--edit').magnificPopup({
       type: 'inline',
       showCloseBtn: true,
-      callbacks: {
+      fixedContentPos: true,
+      /*callbacks: {
         beforeOpen: function() {
           $('html, body').css('overflow', 'hidden');
         },
         beforeClose: function() {
           $('html, body').css('overflow', '');
         }
-      }
+      }*/
     });
 
     $('.se__join button').click(function (e) {
@@ -153,10 +154,15 @@
       $(this).removeClass('error')
     });
 
-
     $('.se__card--checkout button').click(function () {
       $('.se__card--checkout input[required]').each(function () {
         if ($(this).val() == '') {
+          $(this).parent('.checkout__row--input').addClass('error')
+        }
+      });
+      $('.se__card--checkout input[type=email]').each(function () {
+        var email = $('.se__card--checkout input[type=email]').val();
+        if(!email.match(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/)) {
           $(this).parent('.checkout__row--input').addClass('error')
         }
       });
@@ -183,6 +189,18 @@
     $('.nice-select').click(function () {
       $(this).parent('.checkout__row--input').removeClass('error')
     });
+
+    $('.form__information button').click(function () {
+      $('.form__information input[required]').each(function () {
+        if ($(this).val() == '') {
+          $(this).parent('.form__input').addClass('error')
+        }
+      });
+    });
+    $('.form__information input[required]').focus(function () {
+      $(this).parent('.form__input').removeClass('error')
+    });
+
 
   });
   

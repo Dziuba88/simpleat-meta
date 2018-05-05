@@ -15,7 +15,7 @@ block content
             input(type="text" placeholder="Subject (optional)", name="contact__subject")
             textarea(cols="30", rows="10", placeholder="Message", name="contact__message")
             label.error This field required
-            button.btn.default Send message
+            button.btn.default.modal--edit(data-mfp-src="#thanks") Send message
         .col.md-6: .se__contact--info
           h3 Simpleat Company
           p Street 12<br>1234 AB, City<br>The Country
@@ -25,3 +25,7 @@ block content
             a(href="") +12(0)34 56 789 00
           p Chamber of Commerce: 12345678<br>VAT: J54346JK3H4K4J45<br>Bank: J54346JK3H4K4J45
           p You can find answers to most questions in our <a>FAQ</a>.<br>For our terms & conditions, return policy and privacy policy<br><a>click here</a>.
+    #thanks.auth--popup.mfp-hide
+      h3 Success!
+      p Message has been send successfully!
+

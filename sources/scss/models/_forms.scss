@@ -1,6 +1,11 @@
 .radio, .checkbox {
   position: relative;
   margin-bottom: 20px;
+  width: 100%;
+
+  .popover {
+    width: 300px;
+  }
 
   input {
     display: none;
@@ -49,6 +54,7 @@
         }
       }
       .text {
+        display: block;
         flex: 1;
         font-size: 16px;
         line-height: 18px;

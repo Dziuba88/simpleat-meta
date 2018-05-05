@@ -89,7 +89,7 @@
                 <input type="text" placeholder="Subject (optional)" name="contact__subject">
                 <textarea cols="30" rows="10" placeholder="Message" name="contact__message"></textarea>
                 <label class="error">This field required</label>
-                <button class="btn default">Send message</button>
+                <button class="btn default modal--edit" data-mfp-src="#thanks">Send message</button>
               </div>
             </div>
             <div class="col md-6">
@@ -102,6 +102,10 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="auth--popup mfp-hide" id="thanks">
+          <h3>Success!</h3>
+          <p>Message has been send successfully!</p>
         </div>
       </section>
     </main>

@@ -47,26 +47,26 @@ block content
                     span PayPal
                   a.btn.default Reorder
               .col.md-4
-                .panel--detail.processing
-                  .date 14/07/2017
-                  .info
-                    svg: use(xlink:href="#processing")
-                    span Processing
                 .panel--detail.delivered
                   .date 14/07/2017
                   .info
                     svg: use(xlink:href="#delivered")
                     span Delivered
-                .panel--detail.canceled
+                .panel--detail.processing
                   .date 14/07/2017
                   .info
-                    svg: use(xlink:href="#canceled")
-                    span Canceled
+                    svg: use(xlink:href="#processing")
+                    span Processing
                 .panel--detail.transit
                   .date 14/07/2017
                   .info
                     svg: use(xlink:href="#transit")
                     span In transit
+                .panel--detail.canceled
+                  .date 14/07/2017
+                  .info
+                    svg: use(xlink:href="#canceled")
+                    span Canceled
             hr
             .row
               .col.md-6
@@ -93,7 +93,10 @@ block content
               .message--title Add a message
               p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
               textarea(placeholder="Message")
-              button.btn.default Send message
+              button.btn.default.modal--edit(data-mfp-src="#thanks") Send message
+    #thanks.auth--popup.mfp-hide
+      h3 Success!
+      p Message has been send successfully!
 
 
 

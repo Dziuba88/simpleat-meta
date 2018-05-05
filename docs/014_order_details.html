@@ -109,14 +109,6 @@
                     </div>
                   </div>
                   <div class="col md-4">
-                    <div class="panel--detail processing">
-                      <div class="date">14/07/2017</div>
-                      <div class="info">
-                        <svg>
-                          <use xlink:href="#processing"></use>
-                        </svg><span>Processing</span>
-                      </div>
-                    </div>
                     <div class="panel--detail delivered">
                       <div class="date">14/07/2017</div>
                       <div class="info">
@@ -125,12 +117,12 @@
                         </svg><span>Delivered</span>
                       </div>
                     </div>
-                    <div class="panel--detail canceled">
+                    <div class="panel--detail processing">
                       <div class="date">14/07/2017</div>
                       <div class="info">
                         <svg>
-                          <use xlink:href="#canceled"></use>
-                        </svg><span>Canceled</span>
+                          <use xlink:href="#processing"></use>
+                        </svg><span>Processing</span>
                       </div>
                     </div>
                     <div class="panel--detail transit">
@@ -139,6 +131,14 @@
                         <svg>
                           <use xlink:href="#transit"></use>
                         </svg><span>In transit</span>
+                      </div>
+                    </div>
+                    <div class="panel--detail canceled">
+                      <div class="date">14/07/2017</div>
+                      <div class="info">
+                        <svg>
+                          <use xlink:href="#canceled"></use>
+                        </svg><span>Canceled</span>
                       </div>
                     </div>
                   </div>
@@ -174,11 +174,15 @@
                   <div class="message--title">Add a message</div>
                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                   <textarea placeholder="Message"></textarea>
-                  <button class="btn default">Send message</button>
+                  <button class="btn default modal--edit" data-mfp-src="#thanks">Send message</button>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="auth--popup mfp-hide" id="thanks">
+          <h3>Success!</h3>
+          <p>Message has been send successfully!</p>
         </div>
       </section>
     </main>
